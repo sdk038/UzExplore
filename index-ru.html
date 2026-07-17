@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UzExplore | Премиальные путешествия по Узбекистану</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("uzexplore-theme")||"light"}catch(e){}</script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <header class="navbar">
@@ -19,9 +21,10 @@
             <a href="#contact">Контакты</a>
         </nav>
         <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Переключить тему"><span aria-hidden="true">◐</span></button>
             <div class="language-switch" aria-label="Выбор языка">
-                <a href="index.html" aria-label="English">EN</a>
-                <a class="active" href="index-ru.html" aria-label="Russian">RU</a>
+                <a href="index.html" aria-label="Английский">EN</a>
+                <a class="active" href="index-ru.html" aria-label="Русский">RU</a>
             </div>
             <a class="btn btn-primary" href="#cities">Исследовать</a>
         </div>
@@ -29,7 +32,19 @@
 </header>
 
 <main>
-    <section class="hero" id="home">
+    <section class="uz-home-hero" id="home">
+        <div class="uz-home-hero__art" aria-hidden="true">
+            <div class="uz-home-ornament"></div>
+            <svg class="uz-home-route" viewBox="0 0 1200 520" preserveAspectRatio="none">
+                <path class="uz-home-route__glow" d="M-50 390 C120 275 220 365 345 260 S560 120 710 215 S905 360 1250 115"/>
+                <path class="uz-home-route__line" d="M-50 390 C120 275 220 365 345 260 S560 120 710 215 S905 360 1250 115"/>
+                <g class="uz-city-dot"><circle cx="345" cy="260" r="8"/><text x="365" y="248">Хива</text></g>
+                <g class="uz-city-dot"><circle cx="570" cy="157" r="8"/><text x="590" y="145">Бухара</text></g>
+                <g class="uz-city-dot"><circle cx="710" cy="215" r="8"/><text x="730" y="203">Самарканд</text></g>
+                <g class="uz-city-dot"><circle cx="1035" cy="195" r="8"/><text x="1055" y="183">Ташкент</text></g>
+            </svg>
+            <div class="uz-home-monuments"><i class="uz-home-dome"></i><i class="uz-home-minaret"></i><i class="uz-home-portal"></i><i class="uz-home-dome uz-home-dome--small"></i></div>
+        </div>
         <div class="hero-content">
             <span class="eyebrow">Премиальные путешествия по Узбекистану</span>
             <h1>Откройте красоту Узбекистана</h1>
@@ -48,11 +63,11 @@
                 <span>Маршруты Шелкового пути</span>
             </div>
             <div class="search-item">
-                <strong>120+ мест</strong>
+                <strong>Подборка мест</strong>
                 <span>Подобранные локации</span>
             </div>
             <div class="search-item">
-                <strong>Рейтинг 4.9</strong>
+                <strong>Подборка гидов</strong>
                 <span>Любимо путешественниками</span>
             </div>
             <div class="search-item">
@@ -72,52 +87,52 @@
         </div>
         <div class="grid cities-grid">
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1729784495820-d6900bd75a22?auto=format&fit=crop&q=80&w=900" alt="Blue domes in Tashkent"></div>
-                <div class="card-body"><h3>Ташкент</h3><p>Живая столица с зелеными бульварами, музеями, рынками и современной гастрономией.</p><div class="meta"><span class="rating">★ 4.9</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20City%20Park%20at%20night.jpg?width=1000" alt="Ночной вид парка Ташкент-Сити" loading="lazy"></div>
+                <div class="card-body"><h3>Ташкент</h3><p>Живая столица с зелеными бульварами, музеями, рынками и современной гастрономией.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1763144967763-2a8a98cb8431?auto=format&fit=crop&q=80&w=900" alt="Samarkand architecture"></div>
-                <div class="card-body"><h3>Самарканд</h3><p>Легендарные памятники, величественные площади и сияющая тимуридская мозаика.</p><div class="meta"><span class="rating">★ 4.9</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan-Samarkand.jpg?width=1000" alt="Ансамбль Регистан в Самарканде" loading="lazy"></div>
+                <div class="card-body"><h3>Самарканд</h3><p>Легендарные памятники, величественные площади и сияющая тимуридская мозаика.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://www.naqshband.uz/images/news/20200128170256.jpg" alt="Bukhara historic dome"></div>
-                <div class="card-body"><h3>Бухара</h3><p>Теплый старинный город минаретов, караван-сараев, двориков и ремесленных мастерских.</p><div class="meta"><span class="rating">★ 4.9</span><a class="mini-btn" href="bukhara-ru.html">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Комплекс Пои-Калян в Бухаре" loading="lazy"></div>
+                <div class="card-body"><h3>Бухара</h3><p>Теплый старинный город минаретов, караван-сараев, двориков и ремесленных мастерских.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="bukhara-ru.html">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1549111998-cdc4a1d5367c?auto=format&fit=crop&q=80&w=900" alt="Khiva old town"></div>
-                <div class="card-body"><h3>Хива</h3><p>Город-музей за крепостными стенами с песчаными улицами, башнями и террасами для заката.</p><div class="meta"><span class="rating">★ 4.8</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Старый город Ичан-Кала в Хиве" loading="lazy"></div>
+                <div class="card-body"><h3>Хива</h3><p>Город-музей за крепостными стенами с песчаными улицами, башнями и террасами для заката.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://www.kupibilet.ru/kland-storage/images/670x0/30x30/cities/uz/nukus/af0eb3ea-77f8-4b99-b7c9-52fd2f7e8428.webp" alt="Nukus landscape"></div>
-                <div class="card-body"><h3>Нукус</h3><p>Ворота к авангардному искусству, пустынным пейзажам и истории Аральского моря.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Фото города Нукус скоро"><span>Нукус</span><small>Фото города скоро</small></div>
+                <div class="card-body"><h3>Нукус</h3><p>Ворота к авангардному искусству, пустынным пейзажам и истории Аральского моря.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://t3.ftcdn.net/jpg/04/56/91/06/360_F_456910600_qTWUQBnUFIbGmlqEtmvspd5SWsndAKv4.jpg" alt="Andijan market"></div>
-                <div class="card-body"><h3>Андижан</h3><p>Город Ферганской долины, известный садами, базарами и региональной культурой.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg?width=1000" alt="Мечеть Девонабой в Андижане" loading="lazy"></div>
+                <div class="card-body"><h3>Андижан</h3><p>Город Ферганской долины, известный садами, базарами и региональной культурой.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://www.orexca.com/img/uzbekistan/namangan/namangan.jpg" alt="Namangan gardens"></div>
-                <div class="card-body"><h3>Наманган</h3><p>Садовые аллеи, духовные места и близкие горные маршруты.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Фото города Наманган скоро"><span>Наманган</span><small>Фото города скоро</small></div>
+                <div class="card-body"><h3>Наманган</h3><p>Садовые аллеи, духовные места и близкие горные маршруты.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://ferganavalley-ctn.uz/wp-content/uploads/2024/12/ferganavalley_nature_road_from_tashkent.jpg" alt="Fergana valley"></div>
-                <div class="card-body"><h3>Фергана</h3><p>Элегантные улицы, мастерские ремесленников, шелковое наследие и гостеприимство долины.</p><div class="meta"><span class="rating">★ 4.8</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Фото города Фергана скоро"><span>Фергана</span><small>Фото города скоро</small></div>
+                <div class="card-body"><h3>Фергана</h3><p>Элегантные улицы, мастерские ремесленников, шелковое наследие и гостеприимство долины.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=900" alt="Jizzakh mountains"></div>
-                <div class="card-body"><h3>Джизак</h3><p>Горный воздух, национальные парки, спокойные города и яркая местная кухня.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Фото города Джизак скоро"><span>Джизак</span><small>Фото города скоро</small></div>
+                <div class="card-body"><h3>Джизак</h3><p>Горный воздух, национальные парки, спокойные города и яркая местная кухня.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?auto=format&fit=crop&q=80&w=900" alt="Qarshi architecture"></div>
-                <div class="card-body"><h3>Карши</h3><p>Южное наследие, мосты, медресе и уютные районные кафе.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20north-east.jpg?width=1000" alt="Мечеть Кок-Гумбаз в Карши" loading="lazy"></div>
+                <div class="card-body"><h3>Карши</h3><p>Южное наследие, мосты, медресе и уютные районные кафе.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://lyubosvit.com.ua/wp-content/uploads/2018/06/Termez.jpg" alt="Termez monuments"></div>
-                <div class="card-body"><h3>Термез</h3><p>Древние буддийские памятники, история у реки и солнечные археологические маршруты.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Termez%20Sultan-Saodat.jpg?width=1000" alt="Ансамбль Султан Саодат в Термезе" loading="lazy"></div>
+                <div class="card-body"><h3>Термез</h3><p>Древние буддийские памятники, история у реки и солнечные археологические маршруты.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGkhu5XZmjRWEsKNpihUR8dU3U6XJqxkQxHHZJBIMRCYK5Bgg7zxWjDkU&s=10" alt="Gulistan park"></div>
-                <div class="card-body"><h3>Гулистан</h3><p>Спокойная остановка с зелеными зонами, местными вкусами и удобным продолжением маршрута.</p><div class="meta"><span class="rating">★ 4.5</span><a class="mini-btn" href="#">Смотреть</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Фото города Гулистан скоро"><span>Гулистан</span><small>Фото города скоро</small></div>
+                <div class="card-body"><h3>Гулистан</h3><p>Спокойная остановка с зелеными зонами, местными вкусами и удобным продолжением маршрута.</p><div class="meta"><span class="rating">Путеводитель</span><a class="mini-btn" href="#">Смотреть</a></div></div>
             </article>
         </div>
     </section>
@@ -156,31 +171,22 @@
 
     <section class="section section-alt" id="restaurants">
         <div class="section-head">
-            <div>
-                <span class="section-kicker">Еда</span>
-                <h2>Популярные рестораны</h2>
-            </div>
-            <p>Подборка мест с теплым сервисом, красивыми интерьерами и вкусами, ради которых возвращаются.</p>
+            <div><span class="section-kicker">Выбор путешественников</span><h2>Популярные места по Узбекистану</h2></div>
+            <p>Три знаковых места в разных городах страны — город указан на каждой карточке.</p>
         </div>
         <div class="grid restaurant-grid">
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=900" alt="Restaurant table"></div><div class="card-body"><h3>Caravan Silk Dining</h3><span class="rating">★ 4.9</span><div class="details"><span>8 Khakikat Street, Бухара</span><span>+998 65 221 44 10</span><span>10:00 - 23:00</span></div></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=900" alt="Modern restaurant interior"></div><div class="card-body"><h3>Azure Plov House</h3><span class="rating">★ 4.8</span><div class="details"><span>12 Amir Temur Avenue, Tashkent</span><span>+998 71 200 18 88</span><span>09:00 - 22:30</span></div></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=900" alt="Elegant cafe"></div><div class="card-body"><h3>Registan Terrace</h3><span class="rating">★ 4.9</span><div class="details"><span>21 Registan Street, Samarkand</span><span>+998 66 235 90 11</span><span>11:00 - 00:00</span></div></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan%20square%20Samarkand.jpg?width=1000" alt="Площадь Регистан в Самарканде" loading="lazy"></div><div class="card-body"><span class="place-city">Самарканд</span><h3>Регистан</h3><p>Монументальный ансамбль медресе и один из символов Узбекистана.</p></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Комплекс Пои-Калян в Бухаре" loading="lazy"></div><div class="card-body"><span class="place-city">Бухара</span><h3>Пои-Калян</h3><p>Исторический ансамбль с минаретом Калян, мечетью и медресе Мири-Араб.</p><a class="mini-btn" href="bukhara-ru.html">Открыть путеводитель</a></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Старый город Ичан-Кала в Хиве" loading="lazy"></div><div class="card-body"><span class="place-city">Хива</span><h3>Ичан-Кала</h3><p>Окружённый стенами старый город с минаретами, дворцами и ремесленными дворами.</p></div></article>
         </div>
     </section>
 
     <section class="section" id="hotels">
-        <div class="section-head">
-            <div>
-                <span class="section-kicker">Проживание</span>
-                <h2>Отели</h2>
-            </div>
-            <p>Современный комфорт и подлинная атмосфера: от городских отелей до камерных двориков.</p>
-        </div>
+        <div class="section-head"><div><span class="section-kicker">Проживание</span><h2>Отели</h2></div><p>Реальные отели в разных городах Узбекистана. Стоимость зависит от дат и проверяется на официальном сайте.</p></div>
         <div class="grid hotel-grid">
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=900" alt="Luxury hotel pool"></div><div class="card-body"><h3>Skyline Palace Tashkent</h3><div class="meta"><span class="price">$145/ночь</span><span class="rating">★ 4.8</span></div><div class="details"><span>Центр Ташкента</span></div><a class="mini-btn" href="#">Забронировать</a></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80&w=900" alt="Boutique hotel room"></div><div class="card-body"><h3>Mirage Samarkand</h3><div class="meta"><span class="price">$118/ночь</span><span class="rating">★ 4.9</span></div><div class="details"><span>Рядом с площадью Регистан</span></div><a class="mini-btn" href="#">Забронировать</a></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=900" alt="Hotel bedroom"></div><div class="card-body"><h3>Old City Courtyard</h3><div class="meta"><span class="price">$92/ночь</span><span class="rating">★ 4.7</span></div><div class="details"><span>Историческая Бухара</span></div><a class="mini-btn" href="#">Забронировать</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--tashkent" role="img" aria-label="Премиальная архитектурная иллюстрация Hyatt Regency Tashkent"><span>Ташкент</span></div><div class="card-body"><h3>Hyatt Regency Tashkent</h3><div class="details"><span>Ташкент</span><span>Цена зависит от даты — проверьте на официальном сайте</span></div><a class="mini-btn" href="https://www.hyatt.com/hyatt-regency/en-US/tasrt-hyatt-regency-tashkent" target="_blank" rel="noopener noreferrer">Официальный сайт</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--samarkand" role="img" aria-label="Премиальная иллюстрация Samarkand Regency Amir Temur в тимуридском стиле"><span>Самарканд</span></div><div class="card-body"><h3>Samarkand Regency Amir Temur</h3><div class="details"><span>Самарканд</span><span>Цена зависит от даты — проверьте на официальном сайте</span></div><a class="mini-btn" href="https://www.silkroad-samarkand.com/hotels/samarkand-regency-amir-temur/" target="_blank" rel="noopener noreferrer">Официальный сайт</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--bukhara" role="img" aria-label="Премиальная иллюстрация Mercure Bukhara Old Town в стиле старой Бухары"><span>Бухара</span></div><div class="card-body"><h3>Mercure Bukhara Old Town</h3><div class="details"><span>Бухара</span><span>Цена зависит от даты — проверьте на официальном сайте</span></div><a class="mini-btn" href="bukhara-ru.html#hotels">Путеводитель по Бухаре</a></div></article>
         </div>
     </section>
 
@@ -236,7 +242,7 @@
             </div>
             <div><h4>Компания</h4><a href="#">О нас</a><a href="#">Контакты</a><a href="#">Конфиденциальность</a></div>
             <div><h4>Исследовать</h4><a href="#cities">Города</a><a href="#hotels">Отели</a><a href="#restaurants">Рестораны</a><a href="#attractions">Достопримечательности</a></div>
-            <div><h4>Контакты</h4><a href="mailto:hello@uzexplore.uz">hello@uzexplore.uz</a><a href="tel:+998712001111">+998 71 200 11 11</a><a href="#">Ташкент, Узбекистан</a></div>
+            <div><h4>Контакты</h4><span>Контактные данные ожидают проверки</span></div>
         </div>
         <p class="copyright">© 2026 UzExplore</p>
     </div>
