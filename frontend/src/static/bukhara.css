@@ -1,0 +1,584 @@
+/* =========================================================
+   Bukhara destination guide
+   Scoped to .bukhara-page so completed homepage styles stay intact.
+   ========================================================= */
+
+.bukhara-page {
+    background: #f7f4ef;
+}
+
+.bukhara-page main {
+    overflow: hidden;
+}
+
+.bukhara-page section[id],
+.bukhara-page nav[id] {
+    scroll-margin-top: 98px;
+}
+
+.bukhara-hero {
+    min-height: min(820px, calc(100vh - 82px));
+    position: relative;
+    display: grid;
+    align-items: end;
+    color: var(--white);
+    background: linear-gradient(135deg, #03162b 0%, #092c50 46%, #075d88 100%);
+}
+
+.bukhara-hero__content {
+    width: min(1220px, 100%);
+    margin: 0 auto;
+    padding: 110px 24px 74px;
+}
+
+.bukhara-hero h1 {
+    margin: 2px 0 22px;
+    font-size: clamp(4.5rem, 11vw, 9.5rem);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+}
+
+.bukhara-hero__content > p {
+    max-width: 690px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.05rem, 2vw, 1.32rem);
+}
+
+.bukhara-hero__facts {
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 46px;
+}
+
+.bukhara-hero__facts span {
+    min-height: 78px;
+    padding: 15px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(16px);
+    font-size: 0.78rem;
+}
+
+.bukhara-hero__facts strong {
+    display: block;
+    font-size: 1.15rem;
+}
+
+.bukhara-hero__credit {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    padding: 7px 11px;
+    border-radius: 99px;
+    background: rgba(0, 0, 0, 0.34);
+    font-size: 0.68rem;
+}
+
+.bukhara-section {
+    width: min(1220px, 100%);
+    margin: 0 auto;
+    padding: 88px 24px;
+}
+
+.bukhara-section--tint {
+    width: 100%;
+    max-width: none;
+    padding-right: max(24px, calc((100vw - 1172px) / 2));
+    padding-left: max(24px, calc((100vw - 1172px) / 2));
+    background: linear-gradient(145deg, #eef6ff, #f8f4ee 65%);
+}
+
+.bukhara-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 34px;
+    margin-bottom: 32px;
+}
+
+.bukhara-heading h2,
+.bukhara-about h2 {
+    margin-top: 6px;
+    font-size: clamp(2.15rem, 4vw, 3.65rem);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.bukhara-heading > p {
+    max-width: 500px;
+    color: var(--muted);
+}
+
+.bukhara-about {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(400px, 0.95fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.bukhara-about > div:first-child p {
+    max-width: 660px;
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.bukhara-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.bukhara-stats article {
+    min-height: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-stats strong {
+    color: var(--blue);
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1;
+}
+
+.bukhara-stats span {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.bukhara-categories {
+    width: min(1172px, calc(100% - 48px));
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    margin: -28px auto 26px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(24px);
+    box-shadow: var(--shadow);
+}
+
+.bukhara-categories a {
+    min-height: 82px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 5px;
+    padding: 10px 6px;
+    border-radius: 16px;
+    color: #31445e;
+    font-size: 0.73rem;
+    font-weight: 700;
+    text-align: center;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.bukhara-categories a span {
+    font-size: 1.25rem;
+}
+
+.bukhara-categories a:hover {
+    color: var(--blue);
+    background: #edf6ff;
+    transform: translateY(-3px);
+}
+
+.bukhara-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.bukhara-card-grid--attractions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--compact {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--directory {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--single {
+    grid-template-columns: minmax(280px, 430px);
+}
+
+.bukhara-place-card,
+.bukhara-info-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 14px 36px rgba(47, 63, 85, 0.09);
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+}
+
+.bukhara-place-card:hover,
+.bukhara-info-card:hover {
+    border-color: rgba(11, 111, 214, 0.28);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(29, 64, 101, 0.16);
+}
+
+.bukhara-place-card img,
+.bukhara-info-card img {
+    height: 230px;
+    transition: transform 0.55s ease;
+}
+
+.bukhara-place-card:hover img,
+.bukhara-info-card:hover img {
+    transform: scale(1.045);
+}
+
+.bukhara-place-card > div,
+.bukhara-info-card > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 21px;
+}
+
+.bukhara-place-card h3,
+.bukhara-info-card h3,
+.bukhara-mini-grid h3,
+.bukhara-transport-grid h3 {
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.bukhara-place-card p,
+.bukhara-info-card p,
+.bukhara-mini-grid p,
+.bukhara-transport-grid p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+.bukhara-location,
+.bukhara-info-card div > span:not(.bukhara-tag) {
+    display: block;
+    margin-top: 14px;
+    color: #64758a;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.bukhara-place-card a,
+.bukhara-info-card a,
+.bukhara-mini-grid a,
+.bukhara-transport-grid a {
+    display: inline-flex;
+    margin-top: 16px;
+    color: var(--blue);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.bukhara-map-links,
+.bukhara-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.bukhara-map-links a,
+.bukhara-card-actions a {
+    margin-top: 0;
+    padding: 8px 11px;
+    border: 1px solid rgba(11, 111, 214, 0.14);
+    border-radius: 999px;
+    background: #edf6ff;
+    font-size: 0.72rem;
+    transition: color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+}
+
+.bukhara-map-links a:hover,
+.bukhara-card-actions a:hover {
+    color: white;
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.bukhara-hero__heritage strong {
+    max-width: 190px;
+    font-size: clamp(0.72rem, 1vw, 0.9rem);
+    line-height: 1.25;
+}
+
+.bukhara-directory-card img {
+    height: 205px;
+}
+
+.bukhara-tag {
+    margin-bottom: 10px;
+    padding: 5px 9px;
+    border-radius: 99px;
+    color: var(--blue);
+    background: #e9f4ff;
+    font-size: 0.67rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.bukhara-card-grid--compact .bukhara-info-card img {
+    height: 176px;
+}
+
+.bukhara-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-mini-grid article {
+    min-height: 220px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.bukhara-mini-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.bukhara-mini-grid article > span {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background: #eaf5ff;
+    font-size: 1.25rem;
+}
+
+.bukhara-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-photo-grid a {
+    min-height: 310px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-photo-grid img {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.5s ease;
+}
+
+.bukhara-photo-grid a::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(180deg, transparent 50%, rgba(5, 20, 38, 0.85));
+}
+
+.bukhara-photo-grid span {
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    bottom: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.bukhara-photo-grid a:hover img {
+    transform: scale(1.06);
+}
+
+.bukhara-transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-transport-grid article {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-transport-grid article > span {
+    min-width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    color: var(--blue);
+    background: #e8f4ff;
+    font-size: 1.35rem;
+}
+
+.bukhara-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-contact-grid a {
+    padding: 28px;
+    border-radius: 22px;
+    color: white;
+    background: linear-gradient(145deg, #102b4b, #0b6fd6);
+    box-shadow: var(--shadow);
+    transition: transform 0.28s ease;
+}
+
+.bukhara-contact-grid a:hover {
+    transform: translateY(-6px);
+}
+
+.bukhara-contact-grid span,
+.bukhara-contact-grid small {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.bukhara-contact-grid strong {
+    display: block;
+    margin: 10px 0 2px;
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+@media (max-width: 1060px) {
+    .bukhara-categories {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .bukhara-card-grid,
+    .bukhara-card-grid--attractions,
+    .bukhara-card-grid--compact,
+    .bukhara-card-grid--directory,
+    .bukhara-mini-grid,
+    .bukhara-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bukhara-about {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 720px) {
+    .bukhara-hero {
+        min-height: 700px;
+        background-position: 58% center;
+    }
+
+    .bukhara-hero__content {
+        padding: 90px 18px 64px;
+    }
+
+    .bukhara-hero h1 {
+        font-size: clamp(4rem, 22vw, 6.5rem);
+    }
+
+    .bukhara-hero__facts {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 34px;
+    }
+
+    .bukhara-hero__credit {
+        display: none;
+    }
+
+    .bukhara-section {
+        padding: 68px 18px;
+    }
+
+    .bukhara-section--tint {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .bukhara-heading {
+        display: block;
+    }
+
+    .bukhara-heading > p {
+        margin-top: 14px;
+    }
+
+    .bukhara-categories {
+        width: calc(100% - 36px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: -20px;
+        padding: 10px;
+    }
+
+    .bukhara-categories a {
+        min-height: 72px;
+        font-size: 0.66rem;
+    }
+
+    .bukhara-card-grid,
+    .bukhara-card-grid--attractions,
+    .bukhara-card-grid--compact,
+    .bukhara-card-grid--directory,
+    .bukhara-card-grid--single,
+    .bukhara-mini-grid,
+    .bukhara-photo-grid,
+    .bukhara-transport-grid,
+    .bukhara-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bukhara-place-card img,
+    .bukhara-info-card img {
+        height: 225px;
+    }
+
+    .bukhara-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bukhara-stats article {
+        min-height: 125px;
+        padding: 18px;
+    }
+
+    .bukhara-photo-grid a {
+        min-height: 280px;
+    }
+
+    .bukhara-transport-grid article {
+        padding: 22px;
+    }
+
+}
+

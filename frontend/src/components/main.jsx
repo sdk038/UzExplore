@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import '../static/styles.css';
+import '../static/base.css';
+import '../static/home.css';
+import '../static/bukhara.css';
+import '../static/bukhara-experience.css';
+import '../static/theme.css';
+import '../static/media.css';
+import '../static/hero.css';
+import '../static/app.css';
 const pageName = location.pathname.split('/').pop() || 'index.html';
 const pages = {
   'index.html': () => import('./HomeEn.jsx'),

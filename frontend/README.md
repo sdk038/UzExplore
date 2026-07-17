@@ -10,8 +10,11 @@
 src/
 ├── components/  # все JSX-файлы, включая точку входа React
 ├── pages/       # все JS-файлы, включая конфигурацию Vite
-└── static/      # стили
+└── static/      # CSS-файлы, разделённые по назначению
 ```
+
+Стили в `static`: `base.css`, `home.css`, `bukhara.css`,
+`bukhara-experience.css`, `theme.css`, `media.css`, `hero.css` и `app.css`.
 
 ```bash
 npm install
