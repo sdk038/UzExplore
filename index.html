@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UzExplore | Premium Travel in Uzbekistan</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("uzexplore-theme")||"light"}catch(e){}</script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <header class="navbar">
@@ -19,6 +21,7 @@
             <a href="#contact">Contact</a>
         </nav>
         <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button>
             <div class="language-switch" aria-label="Language selector">
                 <a class="active" href="index.html" aria-label="English">EN</a>
                 <a href="index-ru.html" aria-label="Russian">RU</a>
@@ -29,7 +32,19 @@
 </header>
 
 <main>
-    <section class="hero" id="home">
+    <section class="uz-home-hero" id="home">
+        <div class="uz-home-hero__art" aria-hidden="true">
+            <div class="uz-home-ornament"></div>
+            <svg class="uz-home-route" viewBox="0 0 1200 520" preserveAspectRatio="none">
+                <path class="uz-home-route__glow" d="M-50 390 C120 275 220 365 345 260 S560 120 710 215 S905 360 1250 115"/>
+                <path class="uz-home-route__line" d="M-50 390 C120 275 220 365 345 260 S560 120 710 215 S905 360 1250 115"/>
+                <g class="uz-city-dot"><circle cx="345" cy="260" r="8"/><text x="365" y="248">Khiva</text></g>
+                <g class="uz-city-dot"><circle cx="570" cy="157" r="8"/><text x="590" y="145">Bukhara</text></g>
+                <g class="uz-city-dot"><circle cx="710" cy="215" r="8"/><text x="730" y="203">Samarkand</text></g>
+                <g class="uz-city-dot"><circle cx="1035" cy="195" r="8"/><text x="1055" y="183">Tashkent</text></g>
+            </svg>
+            <div class="uz-home-monuments"><i class="uz-home-dome"></i><i class="uz-home-minaret"></i><i class="uz-home-portal"></i><i class="uz-home-dome uz-home-dome--small"></i></div>
+        </div>
         <div class="hero-content">
             <span class="eyebrow">Premium Uzbekistan travel</span>
             <h1>Discover the Beauty of Uzbekistan</h1>
@@ -44,7 +59,7 @@
     <div class="floating-search">
         <div class="search-panel" aria-label="Trip highlights">
             <div class="search-item">
-                <strong>12 Citiessssss</strong>
+                <strong>12 Cities</strong>
                 <span>Silk Road routes</span>
             </div>
             <div class="search-item">
@@ -72,52 +87,52 @@
         </div>
         <div class="grid cities-grid">
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1729784495820-d6900bd75a22?auto=format&fit=crop&q=80&w=900" alt="Blue domes in Tashkent"></div>
-                <div class="card-body"><h3>Tashkent</h3><p>A lively capital with leafy boulevards, museums, markets, and modern dining.</p><div class="meta"><span class="rating">★ 4.8</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20City%20Park%20at%20night.jpg?width=1000" alt="Tashkent City Park at night" loading="lazy"></div>
+                <div class="card-body"><h3>Tashkent</h3><p>A lively capital with leafy boulevards, museums, markets, and modern dining.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1763144967763-2a8a98cb8431?auto=format&fit=crop&q=80&w=900" alt="Samarkand architecture"></div>
-                <div class="card-body"><h3>Samarkand</h3><p>Legendary monuments, grand squares, and shimmering Timurid tilework.</p><div class="meta"><span class="rating">★ 4.9</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan-Samarkand.jpg?width=1000" alt="Registan ensemble in Samarkand" loading="lazy"></div>
+                <div class="card-body"><h3>Samarkand</h3><p>Legendary monuments, grand squares, and shimmering Timurid tilework.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1662468752704-f256cf5c6784?auto=format&fit=crop&q=80&w=900" alt="Bukhara historic dome"></div>
-                <div class="card-body"><h3>Bukhara</h3><p>A warm old city of minarets, caravanserais, courtyards, and craft ateliers.</p><div class="meta"><span class="rating">★ 4.9</span><a class="mini-btn" href="bukhara.html">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Poi Kalyan complex in Bukhara" loading="lazy"></div>
+                <div class="card-body"><h3>Bukhara</h3><p>A warm old city of minarets, caravanserais, courtyards, and craft ateliers.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="bukhara.html">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1549111998-cdc4a1d5367c?auto=format&fit=crop&q=80&w=900" alt="Khiva old town"></div>
-                <div class="card-body"><h3>Khiva</h3><p>A walled museum city with sandy lanes, towers, and sunset terraces.</p><div class="meta"><span class="rating">★ 4.8</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Itchan Kala old city in Khiva" loading="lazy"></div>
+                <div class="card-body"><h3>Khiva</h3><p>A walled museum city with sandy lanes, towers, and sunset terraces.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&q=80&w=900" alt="Nukus landscape"></div>
-                <div class="card-body"><h3>Nukus</h3><p>Gateway to avant-garde art, desert landscapes, and the Aral Sea story.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Nukus city photo coming soon"><span>Nukus</span><small>City photo coming soon</small></div>
+                <div class="card-body"><h3>Nukus</h3><p>Gateway to avant-garde art, desert landscapes, and the Aral Sea story.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1488459716781-31db52582f75?auto=format&fit=crop&q=80&w=900" alt="Andijan market"></div>
-                <div class="card-body"><h3>Andijan</h3><p>A Fergana Valley city known for orchards, bazaars, and regional culture.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg?width=1000" alt="Devonaboy Jome Mosque in Andijan" loading="lazy"></div>
+                <div class="card-body"><h3>Andijan</h3><p>A Fergana Valley city known for orchards, bazaars, and regional culture.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=900" alt="Namangan gardens"></div>
-                <div class="card-body"><h3>Namangan</h3><p>Garden avenues, spiritual sites, and mountain escapes nearby.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Namangan city photo coming soon"><span>Namangan</span><small>City photo coming soon</small></div>
+                <div class="card-body"><h3>Namangan</h3><p>Garden avenues, spiritual sites, and mountain escapes nearby.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=900" alt="Fergana valley"></div>
-                <div class="card-body"><h3>Fergana</h3><p>Elegant streets, artisan workshops, silk heritage, and valley hospitality.</p><div class="meta"><span class="rating">★ 4.8</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Fergana city photo coming soon"><span>Fergana</span><small>City photo coming soon</small></div>
+                <div class="card-body"><h3>Fergana</h3><p>Elegant streets, artisan workshops, silk heritage, and valley hospitality.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=900" alt="Jizzakh mountains"></div>
-                <div class="card-body"><h3>Jizzakh</h3><p>Mountain air, national parks, quiet towns, and memorable local cuisine.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Jizzakh city photo coming soon"><span>Jizzakh</span><small>City photo coming soon</small></div>
+                <div class="card-body"><h3>Jizzakh</h3><p>Mountain air, national parks, quiet towns, and memorable local cuisine.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?auto=format&fit=crop&q=80&w=900" alt="Qarshi architecture"></div>
-                <div class="card-body"><h3>Qarshi</h3><p>Southern heritage, bridges, madrasahs, and relaxed neighborhood cafes.</p><div class="meta"><span class="rating">★ 4.6</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20north-east.jpg?width=1000" alt="Kok-Gumbaz Mosque in Qarshi" loading="lazy"></div>
+                <div class="card-body"><h3>Qarshi</h3><p>Southern heritage, bridges, madrasahs, and relaxed neighborhood cafes.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=900" alt="Termez monuments"></div>
-                <div class="card-body"><h3>Termez</h3><p>Ancient Buddhist sites, riverside history, and sunlit archaeological routes.</p><div class="meta"><span class="rating">★ 4.7</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Termez%20Sultan-Saodat.jpg?width=1000" alt="Sultan Saodat ensemble in Termez" loading="lazy"></div>
+                <div class="card-body"><h3>Termez</h3><p>Ancient Buddhist sites, riverside history, and sunlit archaeological routes.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
             <article class="card city-card">
-                <div class="image"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&q=80&w=900" alt="Gulistan park"></div>
-                <div class="card-body"><h3>Gulistan</h3><p>A calm stop with green spaces, regional flavors, and easy onward travel.</p><div class="meta"><span class="rating">★ 4.5</span><a class="mini-btn" href="#">Explore</a></div></div>
+                <div class="image city-image-placeholder" role="img" aria-label="Gulistan city photo coming soon"><span>Gulistan</span><small>City photo coming soon</small></div>
+                <div class="card-body"><h3>Gulistan</h3><p>A calm stop with green spaces, regional flavors, and easy onward travel.</p><div class="meta"><span class="rating">City guide</span><a class="mini-btn" href="#">Explore</a></div></div>
             </article>
         </div>
     </section>
@@ -156,31 +171,22 @@
 
     <section class="section section-alt" id="restaurants">
         <div class="section-head">
-            <div>
-                <span class="section-kicker">Dining</span>
-                <h2>Popular Restaurants</h2>
-            </div>
-            <p>Selected addresses for warm service, memorable interiors, and the flavors travelers come back for.</p>
+            <div><span class="section-kicker">Traveller favourites</span><h2>Popular places across Uzbekistan</h2></div>
+            <p>Three landmark experiences in different cities across the country, with the city clearly shown on every card.</p>
         </div>
         <div class="grid restaurant-grid">
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=900" alt="Restaurant table"></div><div class="card-body"><h3>Caravan Silk Dining</h3><span class="rating">★ 4.9</span><div class="details"><span>8 Khakikat Street, Bukhara</span><span>+998 65 221 44 10</span><span>10:00 - 23:00</span></div></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=900" alt="Modern restaurant interior"></div><div class="card-body"><h3>Azure Plov House</h3><span class="rating">★ 4.8</span><div class="details"><span>12 Amir Temur Avenue, Tashkent</span><span>+998 71 200 18 88</span><span>09:00 - 22:30</span></div></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=900" alt="Elegant cafe"></div><div class="card-body"><h3>Registan Terrace</h3><span class="rating">★ 4.9</span><div class="details"><span>21 Registan Street, Samarkand</span><span>+998 66 235 90 11</span><span>11:00 - 00:00</span></div></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan%20square%20Samarkand.jpg?width=1000" alt="Registan Square in Samarkand" loading="lazy"></div><div class="card-body"><span class="place-city">Samarkand</span><h3>Registan</h3><p>A monumental ensemble of madrasahs and one of Uzbekistan’s defining landmarks.</p></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Poi Kalyan complex in Bukhara" loading="lazy"></div><div class="card-body"><span class="place-city">Bukhara</span><h3>Poi Kalyan</h3><p>A historic ensemble centred on the Kalyan Minaret, mosque and Mir-i-Arab Madrasah.</p><a class="mini-btn" href="bukhara.html">Open city guide</a></div></article>
+            <article class="card media-card"><div class="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Itchan Kala old city in Khiva" loading="lazy"></div><div class="card-body"><span class="place-city">Khiva</span><h3>Itchan Kala</h3><p>A walled old city of minarets, palaces and working craft courtyards.</p></div></article>
         </div>
     </section>
 
     <section class="section" id="hotels">
-        <div class="section-head">
-            <div>
-                <span class="section-kicker">Stay</span>
-                <h2>Hotels</h2>
-            </div>
-            <p>Modern comfort and authentic atmosphere, from polished city hotels to intimate courtyard retreats.</p>
-        </div>
+        <div class="section-head"><div><span class="section-kicker">Stay</span><h2>Hotels</h2></div><p>Real hotels in different Uzbekistan cities. Rates depend on dates and should be checked on the official website.</p></div>
         <div class="grid hotel-grid">
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=900" alt="Luxury hotel pool"></div><div class="card-body"><h3>Skyline Palace Tashkent</h3><div class="meta"><span class="price">$145/night</span><span class="rating">★ 4.8</span></div><div class="details"><span>Central Tashkent</span></div><a class="mini-btn" href="#">Book</a></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80&w=900" alt="Boutique hotel room"></div><div class="card-body"><h3>Mirage Samarkand</h3><div class="meta"><span class="price">$118/night</span><span class="rating">★ 4.9</span></div><div class="details"><span>Near Registan Square</span></div><a class="mini-btn" href="#">Book</a></div></article>
-            <article class="card media-card"><div class="image"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=900" alt="Hotel bedroom"></div><div class="card-body"><h3>Old City Courtyard</h3><div class="meta"><span class="price">$92/night</span><span class="rating">★ 4.7</span></div><div class="details"><span>Historic Bukhara</span></div><a class="mini-btn" href="#">Book</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--tashkent" role="img" aria-label="Premium architectural visual for Hyatt Regency Tashkent"><span>Tashkent</span></div><div class="card-body"><h3>Hyatt Regency Tashkent</h3><div class="details"><span>Tashkent</span><span>Price depends on date — check the official website</span></div><a class="mini-btn" href="https://www.hyatt.com/hyatt-regency/en-US/tasrt-hyatt-regency-tashkent" target="_blank" rel="noopener noreferrer">Official site</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--samarkand" role="img" aria-label="Premium Timurid-inspired visual for Samarkand Regency Amir Temur"><span>Samarkand</span></div><div class="card-body"><h3>Samarkand Regency Amir Temur</h3><div class="details"><span>Samarkand</span><span>Price depends on date — check the official website</span></div><a class="mini-btn" href="https://www.silkroad-samarkand.com/hotels/samarkand-regency-amir-temur/" target="_blank" rel="noopener noreferrer">Official site</a></div></article>
+            <article class="card media-card"><div class="homepage-hotel-placeholder homepage-hotel-visual--bukhara" role="img" aria-label="Premium Old Bukhara architectural visual for Mercure Bukhara Old Town"><span>Bukhara</span></div><div class="card-body"><h3>Mercure Bukhara Old Town</h3><div class="details"><span>Bukhara</span><span>Price depends on date — check the official website</span></div><a class="mini-btn" href="bukhara.html#hotels">Bukhara guide</a></div></article>
         </div>
     </section>
 
@@ -236,7 +242,7 @@
             </div>
             <div><h4>Company</h4><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div>
             <div><h4>Explore</h4><a href="#cities">Cities</a><a href="#hotels">Hotels</a><a href="#restaurants">Restaurants</a><a href="#attractions">Attractions</a></div>
-            <div><h4>Contact</h4><a href="mailto:hello@uzexplore.uz">hello@uzexplore.uz</a><a href="tel:+998712001111">+998 71 200 11 11</a><a href="#">Tashkent, Uzbekistan</a></div>
+            <div><h4>Contact</h4><span>Contact details pending verification</span></div>
         </div>
         <p class="copyright">© 2026 UzExplore</p>
     </div>

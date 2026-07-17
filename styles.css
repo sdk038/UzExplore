@@ -14,6 +14,7 @@
     --radius: 18px;
 }
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -194,9 +195,7 @@ a {
     align-items: center;
     overflow: hidden;
     color: var(--white);
-    background:
-            linear-gradient(90deg, rgba(5, 31, 63, 0.72), rgba(5, 31, 63, 0.28) 58%, rgba(5, 31, 63, 0.1)),
-            url("https://images.unsplash.com/photo-1662468752704-f256cf5c6784?auto=format&fit=crop&q=85&w=2200") center/cover;
+    background: linear-gradient(125deg, #061a36, #0a477c 58%, #087e8d);
 }
 
 .hero::after {
@@ -846,4 +845,2408 @@ a {
     .footer-grid {
         gap: 24px;
     }
+}
+
+/* =========================================================
+   Bukhara destination guide
+   Scoped to .bukhara-page so completed homepage styles stay intact.
+   ========================================================= */
+
+.bukhara-page {
+    background: #f7f4ef;
+}
+
+.bukhara-page main {
+    overflow: hidden;
+}
+
+.bukhara-page section[id],
+.bukhara-page nav[id] {
+    scroll-margin-top: 98px;
+}
+
+.bukhara-hero {
+    min-height: min(820px, calc(100vh - 82px));
+    position: relative;
+    display: grid;
+    align-items: end;
+    color: var(--white);
+    background: linear-gradient(135deg, #03162b 0%, #092c50 46%, #075d88 100%);
+}
+
+.bukhara-hero__content {
+    width: min(1220px, 100%);
+    margin: 0 auto;
+    padding: 110px 24px 74px;
+}
+
+.bukhara-hero h1 {
+    margin: 2px 0 22px;
+    font-size: clamp(4.5rem, 11vw, 9.5rem);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+}
+
+.bukhara-hero__content > p {
+    max-width: 690px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.05rem, 2vw, 1.32rem);
+}
+
+.bukhara-hero__facts {
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 46px;
+}
+
+.bukhara-hero__facts span {
+    min-height: 78px;
+    padding: 15px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(16px);
+    font-size: 0.78rem;
+}
+
+.bukhara-hero__facts strong {
+    display: block;
+    font-size: 1.15rem;
+}
+
+.bukhara-hero__credit {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    padding: 7px 11px;
+    border-radius: 99px;
+    background: rgba(0, 0, 0, 0.34);
+    font-size: 0.68rem;
+}
+
+.bukhara-section {
+    width: min(1220px, 100%);
+    margin: 0 auto;
+    padding: 88px 24px;
+}
+
+.bukhara-section--tint {
+    width: 100%;
+    max-width: none;
+    padding-right: max(24px, calc((100vw - 1172px) / 2));
+    padding-left: max(24px, calc((100vw - 1172px) / 2));
+    background: linear-gradient(145deg, #eef6ff, #f8f4ee 65%);
+}
+
+.bukhara-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 34px;
+    margin-bottom: 32px;
+}
+
+.bukhara-heading h2,
+.bukhara-about h2 {
+    margin-top: 6px;
+    font-size: clamp(2.15rem, 4vw, 3.65rem);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.bukhara-heading > p {
+    max-width: 500px;
+    color: var(--muted);
+}
+
+.bukhara-about {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(400px, 0.95fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.bukhara-about > div:first-child p {
+    max-width: 660px;
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.bukhara-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.bukhara-stats article {
+    min-height: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-stats strong {
+    color: var(--blue);
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1;
+}
+
+.bukhara-stats span {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.bukhara-categories {
+    width: min(1172px, calc(100% - 48px));
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    margin: -28px auto 26px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(24px);
+    box-shadow: var(--shadow);
+}
+
+.bukhara-categories a {
+    min-height: 82px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 5px;
+    padding: 10px 6px;
+    border-radius: 16px;
+    color: #31445e;
+    font-size: 0.73rem;
+    font-weight: 700;
+    text-align: center;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.bukhara-categories a span {
+    font-size: 1.25rem;
+}
+
+.bukhara-categories a:hover {
+    color: var(--blue);
+    background: #edf6ff;
+    transform: translateY(-3px);
+}
+
+.bukhara-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.bukhara-card-grid--attractions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--compact {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--directory {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bukhara-card-grid--single {
+    grid-template-columns: minmax(280px, 430px);
+}
+
+.bukhara-place-card,
+.bukhara-info-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 14px 36px rgba(47, 63, 85, 0.09);
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+}
+
+.bukhara-place-card:hover,
+.bukhara-info-card:hover {
+    border-color: rgba(11, 111, 214, 0.28);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(29, 64, 101, 0.16);
+}
+
+.bukhara-place-card img,
+.bukhara-info-card img {
+    height: 230px;
+    transition: transform 0.55s ease;
+}
+
+.bukhara-place-card:hover img,
+.bukhara-info-card:hover img {
+    transform: scale(1.045);
+}
+
+.bukhara-place-card > div,
+.bukhara-info-card > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 21px;
+}
+
+.bukhara-place-card h3,
+.bukhara-info-card h3,
+.bukhara-mini-grid h3,
+.bukhara-transport-grid h3 {
+    font-size: 1.04rem;
+    line-height: 1.3;
+}
+
+.bukhara-place-card p,
+.bukhara-info-card p,
+.bukhara-mini-grid p,
+.bukhara-transport-grid p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+.bukhara-location,
+.bukhara-info-card div > span:not(.bukhara-tag) {
+    display: block;
+    margin-top: 14px;
+    color: #64758a;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.bukhara-place-card a,
+.bukhara-info-card a,
+.bukhara-mini-grid a,
+.bukhara-transport-grid a {
+    display: inline-flex;
+    margin-top: 16px;
+    color: var(--blue);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.bukhara-map-links,
+.bukhara-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.bukhara-map-links a,
+.bukhara-card-actions a {
+    margin-top: 0;
+    padding: 8px 11px;
+    border: 1px solid rgba(11, 111, 214, 0.14);
+    border-radius: 999px;
+    background: #edf6ff;
+    font-size: 0.72rem;
+    transition: color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+}
+
+.bukhara-map-links a:hover,
+.bukhara-card-actions a:hover {
+    color: white;
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.bukhara-hero__heritage strong {
+    max-width: 190px;
+    font-size: clamp(0.72rem, 1vw, 0.9rem);
+    line-height: 1.25;
+}
+
+.bukhara-directory-card img {
+    height: 205px;
+}
+
+.bukhara-tag {
+    margin-bottom: 10px;
+    padding: 5px 9px;
+    border-radius: 99px;
+    color: var(--blue);
+    background: #e9f4ff;
+    font-size: 0.67rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.bukhara-card-grid--compact .bukhara-info-card img {
+    height: 176px;
+}
+
+.bukhara-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-mini-grid article {
+    min-height: 220px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.bukhara-mini-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.bukhara-mini-grid article > span {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background: #eaf5ff;
+    font-size: 1.25rem;
+}
+
+.bukhara-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-photo-grid a {
+    min-height: 310px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-photo-grid img {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.5s ease;
+}
+
+.bukhara-photo-grid a::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(180deg, transparent 50%, rgba(5, 20, 38, 0.85));
+}
+
+.bukhara-photo-grid span {
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    bottom: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.bukhara-photo-grid a:hover img {
+    transform: scale(1.06);
+}
+
+.bukhara-transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-transport-grid article {
+    display: flex;
+    gap: 20px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: var(--shadow-soft);
+}
+
+.bukhara-transport-grid article > span {
+    min-width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    color: var(--blue);
+    background: #e8f4ff;
+    font-size: 1.35rem;
+}
+
+.bukhara-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bukhara-contact-grid a {
+    padding: 28px;
+    border-radius: 22px;
+    color: white;
+    background: linear-gradient(145deg, #102b4b, #0b6fd6);
+    box-shadow: var(--shadow);
+    transition: transform 0.28s ease;
+}
+
+.bukhara-contact-grid a:hover {
+    transform: translateY(-6px);
+}
+
+.bukhara-contact-grid span,
+.bukhara-contact-grid small {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.bukhara-contact-grid strong {
+    display: block;
+    margin: 10px 0 2px;
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+@media (max-width: 1060px) {
+    .bukhara-categories {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .bukhara-card-grid,
+    .bukhara-card-grid--attractions,
+    .bukhara-card-grid--compact,
+    .bukhara-card-grid--directory,
+    .bukhara-mini-grid,
+    .bukhara-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bukhara-about {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 720px) {
+    .bukhara-hero {
+        min-height: 700px;
+        background-position: 58% center;
+    }
+
+    .bukhara-hero__content {
+        padding: 90px 18px 64px;
+    }
+
+    .bukhara-hero h1 {
+        font-size: clamp(4rem, 22vw, 6.5rem);
+    }
+
+    .bukhara-hero__facts {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 34px;
+    }
+
+    .bukhara-hero__credit {
+        display: none;
+    }
+
+    .bukhara-section {
+        padding: 68px 18px;
+    }
+
+    .bukhara-section--tint {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .bukhara-heading {
+        display: block;
+    }
+
+    .bukhara-heading > p {
+        margin-top: 14px;
+    }
+
+    .bukhara-categories {
+        width: calc(100% - 36px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: -20px;
+        padding: 10px;
+    }
+
+    .bukhara-categories a {
+        min-height: 72px;
+        font-size: 0.66rem;
+    }
+
+    .bukhara-card-grid,
+    .bukhara-card-grid--attractions,
+    .bukhara-card-grid--compact,
+    .bukhara-card-grid--directory,
+    .bukhara-card-grid--single,
+    .bukhara-mini-grid,
+    .bukhara-photo-grid,
+    .bukhara-transport-grid,
+    .bukhara-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bukhara-place-card img,
+    .bukhara-info-card img {
+        height: 225px;
+    }
+
+    .bukhara-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bukhara-stats article {
+        min-height: 125px;
+        padding: 18px;
+    }
+
+    .bukhara-photo-grid a {
+        min-height: 280px;
+    }
+
+    .bukhara-transport-grid article {
+        padding: 22px;
+    }
+
+}
+
+/* Bukhara living Silk Road experience */
+html:has(body.bukhara-page) {
+    scroll-behavior: smooth;
+}
+
+body.bukhara-page {
+    --bukhara-page: #f5f8fc;
+    --bukhara-surface: rgba(255, 255, 255, 0.86);
+    --bukhara-surface-solid: #ffffff;
+    --bukhara-tint: #edf5fc;
+    --bukhara-border: rgba(20, 57, 91, 0.11);
+    --bukhara-copy: #23374e;
+    --bukhara-muted: #6d7d90;
+    --bukhara-deep: #071f3a;
+    --bukhara-gold: #e4b85c;
+    --bukhara-gold-soft: #f8e5af;
+    color: var(--bukhara-copy);
+    background: var(--bukhara-page);
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+html[data-theme="dark"] body.bukhara-page {
+    --ink: #eef6ff;
+    --muted: #9fb0c5;
+    --bukhara-page: #071321;
+    --bukhara-surface: rgba(14, 31, 50, 0.9);
+    --bukhara-surface-solid: #0e2034;
+    --bukhara-tint: #0a1929;
+    --bukhara-border: rgba(155, 199, 239, 0.14);
+    --bukhara-copy: #edf6ff;
+    --bukhara-muted: #9fb0c5;
+    --bukhara-deep: #020a13;
+}
+
+.bukhara-page .navbar {
+    border-color: var(--bukhara-border);
+    background: color-mix(in srgb, var(--bukhara-surface-solid) 86%, transparent);
+}
+
+.bukhara-page .nav-links a,
+.bukhara-page .language-switch a {
+    color: var(--bukhara-copy);
+}
+
+.bukhara-theme-toggle {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--bukhara-border);
+    border-radius: 50%;
+    color: var(--blue);
+    background: var(--bukhara-surface);
+    box-shadow: 0 8px 24px rgba(5, 33, 61, 0.1);
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.bukhara-theme-toggle:hover {
+    color: var(--bukhara-gold);
+    transform: rotate(18deg) translateY(-2px);
+}
+
+.bukhara-silk-hero {
+    min-height: 760px;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 72% 28%, rgba(27, 148, 224, 0.24), transparent 25%),
+        radial-gradient(circle at 24% 16%, rgba(228, 184, 92, 0.14), transparent 23%),
+        linear-gradient(135deg, #03162b 0%, #092c50 46%, #075d88 100%);
+}
+
+.bukhara-silk-hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    opacity: 0.26;
+    background-image:
+        linear-gradient(30deg, transparent 46%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0.1) 49%, transparent 50%),
+        linear-gradient(-30deg, transparent 46%, rgba(255, 255, 255, 0.07) 47%, rgba(255, 255, 255, 0.07) 49%, transparent 50%);
+    background-size: 64px 112px;
+    mask-image: linear-gradient(90deg, transparent 4%, black 48%, transparent 94%);
+}
+
+.bukhara-silk-hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: auto 0 0;
+    height: 260px;
+    content: "";
+    background: linear-gradient(180deg, transparent, rgba(2, 12, 24, 0.86));
+}
+
+.bukhara-silk-hero__art {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+}
+
+.bukhara-ornament {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    border: 1px solid rgba(233, 196, 111, 0.26);
+    transform: rotate(45deg);
+    animation: bukhara-ornament-drift 18s ease-in-out infinite alternate;
+}
+
+.bukhara-ornament::before,
+.bukhara-ornament::after {
+    position: absolute;
+    inset: 22px;
+    border: inherit;
+    content: "";
+}
+
+.bukhara-ornament::after {
+    inset: 54px;
+    border-radius: 50%;
+}
+
+.bukhara-ornament--one {
+    top: 82px;
+    right: 9%;
+}
+
+.bukhara-ornament--two {
+    right: 31%;
+    bottom: -150px;
+    transform: rotate(22deg) scale(1.35);
+    animation-delay: -7s;
+}
+
+.bukhara-route {
+    width: 66%;
+    height: 390px;
+    position: absolute;
+    top: 130px;
+    right: -3%;
+    overflow: visible;
+}
+
+.bukhara-route path {
+    fill: none;
+}
+
+.bukhara-route__shadow {
+    stroke: rgba(3, 10, 20, 0.34);
+    stroke-width: 12;
+    filter: blur(9px);
+}
+
+.bukhara-route__line {
+    stroke: url("#route-gradient");
+    stroke: var(--bukhara-gold);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-dasharray: 8 14;
+    animation: bukhara-route-flow 16s linear infinite;
+}
+
+.bukhara-route circle {
+    fill: #fff3c9;
+    stroke: rgba(239, 194, 91, 0.33);
+    stroke-width: 16;
+    filter: drop-shadow(0 0 12px #f2c15e);
+    animation: bukhara-city-glow 2.8s ease-in-out infinite alternate;
+}
+
+.bukhara-route circle:nth-of-type(2) {
+    animation-delay: -1.2s;
+}
+
+.bukhara-route circle:nth-of-type(3) {
+    animation-delay: -2s;
+}
+
+.bukhara-particles i {
+    --size: calc(2px + (var(--i) % 4) * 1px);
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    left: calc(7% + (var(--i) * 6.6%));
+    top: calc(12% + (var(--i) % 6) * 10%);
+    border-radius: 50%;
+    background: rgba(255, 236, 181, 0.72);
+    box-shadow: 0 0 12px rgba(243, 199, 95, 0.7);
+    animation: bukhara-particle-float calc(7s + var(--i) * 0.35s) ease-in-out infinite alternate;
+}
+
+.bukhara-skyline {
+    height: 270px;
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    left: 38%;
+    opacity: 0.94;
+    filter: drop-shadow(0 -12px 34px rgba(36, 178, 224, 0.12));
+}
+
+.bukhara-skyline > span {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(180deg, #0b4569, #03172c 80%);
+}
+
+.bukhara-skyline .dome {
+    width: 150px;
+    height: 120px;
+    border-radius: 50% 50% 7% 7%;
+}
+
+.bukhara-skyline .dome::after {
+    width: 8px;
+    height: 26px;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 4px);
+    border-radius: 6px 6px 0 0;
+    content: "";
+    background: var(--bukhara-gold);
+}
+
+.dome--one { left: 5%; transform: scale(0.72); }
+.dome--two { right: 8%; width: 190px !important; height: 145px !important; }
+.dome--three { right: 34%; transform: scale(0.54); }
+
+.bukhara-skyline .minaret {
+    width: 74px;
+    height: 255px;
+    right: 29%;
+    border-radius: 16px 16px 2px 2px;
+    clip-path: polygon(36% 0, 64% 0, 72% 7%, 66% 10%, 70% 100%, 30% 100%, 34% 10%, 28% 7%);
+}
+
+.bukhara-skyline .minaret::after {
+    position: absolute;
+    inset: 52px 20px 0;
+    content: "";
+    background: repeating-linear-gradient(180deg, transparent 0 16px, rgba(75, 184, 221, 0.16) 17px 19px);
+}
+
+.bukhara-skyline .arch {
+    width: 142px;
+    height: 180px;
+    border-radius: 70px 70px 0 0;
+}
+
+.arch--one { left: 25%; }
+.arch--two { right: 43%; transform: scale(0.72); transform-origin: bottom; }
+
+.bukhara-hero__content {
+    z-index: 2;
+}
+
+.bukhara-live-time {
+    width: max-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2px 14px;
+    margin-top: 28px;
+    padding: 13px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    color: white;
+    background: rgba(4, 26, 48, 0.38);
+    backdrop-filter: blur(16px);
+}
+
+.bukhara-live-time span,
+.bukhara-live-time small {
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+.bukhara-live-time strong {
+    grid-row: span 2;
+    align-self: center;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+}
+
+.bukhara-page .bukhara-section,
+.bukhara-page .bukhara-categories {
+    color: var(--bukhara-copy);
+}
+
+.bukhara-page .bukhara-section--tint {
+    background: var(--bukhara-tint);
+}
+
+.bukhara-page .bukhara-about,
+.bukhara-page .bukhara-stats article,
+.bukhara-page .bukhara-categories,
+.bukhara-page .bukhara-place-card,
+.bukhara-page .bukhara-info-card,
+.bukhara-page .bukhara-transport-grid article {
+    border-color: var(--bukhara-border);
+    background: var(--bukhara-surface);
+}
+
+.bukhara-page .bukhara-heading p,
+.bukhara-page .bukhara-info-card p,
+.bukhara-page .bukhara-place-card p,
+.bukhara-page .bukhara-facts-list,
+.bukhara-page .bukhara-about p {
+    color: var(--bukhara-muted);
+}
+
+.bukhara-card-grid--rich {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bukhara-rich-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.bukhara-info-card > .bukhara-card-gallery {
+    height: 190px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 21px 21px 0 0;
+}
+
+.bukhara-gallery__track {
+    height: 100%;
+    display: flex;
+    overflow: auto hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.bukhara-gallery__track::-webkit-scrollbar {
+    display: none;
+}
+
+.bukhara-gallery__slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    scroll-snap-align: start;
+}
+
+.bukhara-info-card .bukhara-gallery__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bukhara-photo-placeholder {
+    overflow: hidden;
+    color: #d8e9f7;
+    background:
+        radial-gradient(circle at 75% 22%, rgba(228, 184, 92, 0.34), transparent 21%),
+        linear-gradient(145deg, #123f66, #071d35);
+}
+
+.bukhara-photo-placeholder::before,
+.bukhara-photo-placeholder::after {
+    position: absolute;
+    content: "";
+    transform: rotate(45deg);
+    border: 1px solid rgba(255, 224, 153, 0.18);
+}
+
+.bukhara-photo-placeholder::before {
+    width: 110px;
+    height: 110px;
+    top: -42px;
+    right: -26px;
+}
+
+.bukhara-photo-placeholder::after {
+    width: 62px;
+    height: 62px;
+    bottom: -24px;
+    left: 18px;
+}
+
+.bukhara-photo-placeholder span,
+.bukhara-photo-placeholder small {
+    position: relative;
+    z-index: 1;
+    display: block;
+    text-align: center;
+}
+
+.bukhara-photo-placeholder span {
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.bukhara-photo-placeholder small {
+    margin-top: 5px;
+    color: rgba(216, 233, 247, 0.64);
+}
+
+.gallery-prev,
+.gallery-next {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: calc(50% - 16px);
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: white;
+    background: rgba(4, 23, 42, 0.68);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.bukhara-card-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 11px;
+}
+
+.bukhara-status {
+    padding: 5px 9px;
+    border-radius: 999px;
+    color: #087351;
+    background: #dbf7eb;
+    font-size: 0.62rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.bukhara-status--photo {
+    color: #8d5b05;
+    background: #fff0c7;
+}
+
+html[data-theme="dark"] .bukhara-status {
+    color: #9ceacb;
+    background: rgba(33, 148, 107, 0.22);
+}
+
+html[data-theme="dark"] .bukhara-status--photo {
+    color: #f6d583;
+    background: rgba(190, 132, 23, 0.23);
+}
+
+.bukhara-facts-list {
+    width: 100%;
+    display: grid;
+    gap: 7px;
+    margin-top: 14px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.77rem;
+}
+
+.bukhara-facts-list li {
+    padding-top: 7px;
+    border-top: 1px solid var(--bukhara-border);
+}
+
+.bukhara-facts-list a {
+    margin-top: 0;
+}
+
+.bukhara-price-note,
+.bukhara-visitor-note,
+.bukhara-wudu {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 0.73rem !important;
+}
+
+.bukhara-price-note {
+    color: var(--blue) !important;
+    background: color-mix(in srgb, var(--blue) 9%, transparent);
+}
+
+.bukhara-visitor-note {
+    background: color-mix(in srgb, var(--bukhara-gold) 14%, transparent);
+}
+
+.bukhara-wudu {
+    margin-top: 8px !important;
+    color: var(--bukhara-muted) !important;
+    border: 1px dashed var(--bukhara-border);
+}
+
+.bukhara-rich-card .bukhara-map-links {
+    margin-top: 10px;
+}
+
+.bukhara-directory-placeholder {
+    height: 205px;
+    display: grid;
+    place-content: center;
+}
+
+.bukhara-directory-card > div:last-child {
+    flex: 1;
+}
+
+@keyframes bukhara-route-flow {
+    to { stroke-dashoffset: -440; }
+}
+
+@keyframes bukhara-city-glow {
+    from { opacity: 0.55; transform: scale(0.85); transform-origin: center; }
+    to { opacity: 1; transform: scale(1.15); transform-origin: center; }
+}
+
+@keyframes bukhara-particle-float {
+    from { transform: translate3d(0, 12px, 0); opacity: 0.2; }
+    to { transform: translate3d(18px, -22px, 0); opacity: 0.9; }
+}
+
+@keyframes bukhara-ornament-drift {
+    from { opacity: 0.24; }
+    to { opacity: 0.55; transform: rotate(62deg) scale(1.08); }
+}
+
+@media (max-width: 1060px) {
+    .bukhara-card-grid--rich {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bukhara-skyline {
+        left: 44%;
+        opacity: 0.62;
+    }
+}
+
+@media (max-width: 720px) {
+    .bukhara-silk-hero {
+        min-height: 780px;
+    }
+
+    .bukhara-route {
+        width: 100%;
+        top: 270px;
+        opacity: 0.58;
+    }
+
+    .bukhara-skyline {
+        right: -28%;
+        left: 18%;
+        opacity: 0.42;
+    }
+
+    .bukhara-live-time {
+        margin-top: 22px;
+    }
+
+    .bukhara-card-grid--rich {
+        grid-template-columns: 1fr;
+    }
+
+    .bukhara-info-card > .bukhara-card-gallery {
+        height: 210px;
+    }
+
+    .bukhara-theme-toggle {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:has(body.bukhara-page) {
+        scroll-behavior: auto;
+    }
+
+    .bukhara-page *,
+    .bukhara-page *::before,
+    .bukhara-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =========================================================
+   Shared theme and animated Uzbekistan homepage hero
+   ========================================================= */
+html { scroll-behavior: smooth; }
+
+html[data-theme="dark"] body:not(.bukhara-page) {
+    --ink: #edf4ff;
+    --white: #111b2c;
+    --cloud: #17243a;
+    --line: rgba(178, 201, 232, .18);
+    --surface: #111b2c;
+    --surface-soft: #17243a;
+    --text: #edf4ff;
+    --muted: #aebbd0;
+    --border: rgba(178, 201, 232, .18);
+    background: #0b1422;
+    color: var(--text);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .navbar,
+html[data-theme="dark"] body:not(.bukhara-page) .card,
+html[data-theme="dark"] body:not(.bukhara-page) .search-panel,
+html[data-theme="dark"] body:not(.bukhara-page) .section-alt,
+html[data-theme="dark"] body:not(.bukhara-page) .footer {
+    background-color: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .section,
+html[data-theme="dark"] body:not(.bukhara-page) main { background-color: #0b1422; }
+html[data-theme="dark"] body:not(.bukhara-page) h1,
+html[data-theme="dark"] body:not(.bukhara-page) h2,
+html[data-theme="dark"] body:not(.bukhara-page) h3,
+html[data-theme="dark"] body:not(.bukhara-page) strong,
+html[data-theme="dark"] body:not(.bukhara-page) .nav-links a { color: var(--text); }
+html[data-theme="dark"] body:not(.bukhara-page) p,
+html[data-theme="dark"] body:not(.bukhara-page) .details,
+html[data-theme="dark"] body:not(.bukhara-page) .search-item span { color: var(--muted); }
+
+.theme-toggle,
+.bukhara-theme-toggle {
+    width: 38px;
+    height: 38px;
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border: 1px solid rgba(91, 125, 174, .28);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .78);
+    color: #0d56d9;
+    cursor: pointer;
+    transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+.theme-toggle:hover, .bukhara-theme-toggle:hover { transform: translateY(-2px) rotate(12deg); }
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .bukhara-theme-toggle { background: #20324c; color: #f7c86b; border-color: rgba(173, 202, 243, .3); }
+
+.uz-home-hero {
+    min-height: 680px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: radial-gradient(circle at 72% 28%, rgba(42, 171, 220, .34), transparent 27%), linear-gradient(128deg, #051633 0%, #0b3f78 51%, #08788c 100%);
+}
+.uz-home-hero::after { content:""; position:absolute; inset:auto 0 0; height:150px; z-index:-1; background:linear-gradient(transparent,rgba(2,12,32,.48)); }
+.uz-home-hero__art { position:absolute; inset:0; z-index:-1; }
+.uz-home-ornament { position:absolute; inset:-140px -80px auto auto; width:520px; height:520px; opacity:.2; transform:rotate(22deg); background:repeating-conic-gradient(from 22.5deg, transparent 0 12deg, #76d7e9 13deg 16deg, transparent 17deg 44deg); border:3px solid rgba(255,255,255,.24); border-radius:50%; animation:uz-ornament 18s linear infinite; }
+.uz-home-route { position:absolute; width:110%; height:76%; left:-5%; top:7%; overflow:visible; }
+.uz-home-route__glow { fill:none; stroke:rgba(54,231,255,.22); stroke-width:18; filter:blur(7px); }
+.uz-home-route__line { fill:none; stroke:#f6cc70; stroke-width:3; stroke-linecap:round; stroke-dasharray:9 15; animation:uz-route 6s linear infinite; }
+.uz-city-dot circle { fill:#f8d177; stroke:#fff; stroke-width:3; filter:drop-shadow(0 0 9px #42ddff); animation:uz-dot 2.2s ease-in-out infinite alternate; transform-origin:center; transform-box:fill-box; }
+.uz-city-dot text { fill:#fff; font-size:15px; font-weight:700; letter-spacing:.04em; }
+.uz-home-monuments { position:absolute; right:7%; bottom:0; width:47%; height:330px; opacity:.82; filter:drop-shadow(0 -16px 30px rgba(52,217,239,.12)); }
+.uz-home-monuments i { position:absolute; bottom:0; display:block; background:linear-gradient(145deg,#0c4167,#071b38); border:1px solid rgba(86,217,235,.35); }
+.uz-home-dome { left:5%; width:170px; height:190px; border-radius:50% 50% 8px 8px; clip-path:polygon(0 44%,15% 28%,35% 16%,47% 0,59% 16%,83% 28%,100% 44%,100% 100%,0 100%); }
+.uz-home-dome--small { left:72%; width:125px; height:150px; }
+.uz-home-minaret { left:42%; width:58px; height:285px; clip-path:polygon(25% 0,75% 0,88% 12%,76% 16%,88% 100%,12% 100%,24% 16%,12% 12%); }
+.uz-home-portal { left:54%; width:150px; height:235px; border-radius:75px 75px 5px 5px; box-shadow:inset 0 0 0 24px rgba(21,106,137,.4); }
+.uz-home-hero .hero-content { position:relative; z-index:2; max-width:720px; margin-left:max(5vw, calc((100vw - 1180px)/2)); padding:130px 24px 170px 0; }
+.uz-home-hero .hero-content h1 { font-size:clamp(3.2rem,6.4vw,6rem); max-width:760px; }
+.uz-home-hero .eyebrow { color:#d6f7ff; background:rgba(255,255,255,.11); border:1px solid rgba(255,255,255,.2); }
+.uz-home-hero .hero-content p { max-width:650px; margin:22px 0 30px; color:rgba(255,255,255,.84); font-size:1.08rem; }
+.uz-home-hero .hero-actions { display:flex; flex-wrap:wrap; gap:14px; }
+
+.bukhara-live-time { margin-bottom: 30px; }
+.bukhara-silk-hero .hero-actions { gap: 16px; margin-top: 0; margin-bottom: 34px; }
+html[data-theme="dark"] .bukhara-categories a { background:#1d2d45; color:#f2f7ff; border-color:rgba(170,199,238,.24); box-shadow:0 10px 24px rgba(0,0,0,.18); }
+html[data-theme="dark"] .bukhara-categories a span { background:#294665; color:#8ee5ff; }
+.bukhara-info-card, .bukhara-place-card { will-change:transform; }
+.bukhara-info-card:hover, .bukhara-place-card:hover { transform:translateY(-7px); box-shadow:0 22px 48px rgba(14,44,80,.16); }
+
+@keyframes uz-route { to { stroke-dashoffset:-96; } }
+@keyframes uz-dot { to { transform:scale(1.35); opacity:.72; } }
+@keyframes uz-ornament { to { transform:rotate(382deg); } }
+
+@media (max-width: 900px) {
+    .uz-home-monuments { right:-12%; width:70%; opacity:.45; }
+    .uz-home-hero .hero-content { margin-left:24px; padding-right:24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior:auto; }
+    .uz-home-route__line, .uz-city-dot circle, .uz-home-ornament { animation:none !important; }
+}
+
+/* =========================================================
+   Final colour, accessibility and directory polish
+   ========================================================= */
+:root {
+    --page-light: #fbfaf7;
+    --surface-light: #ffffff;
+    --sand-light: #f5f0e8;
+    --page-dark: #050c18;
+    --surface-dark: #0d1a2c;
+    --surface-dark-raised: #12243a;
+    --copy-dark: #f4f8ff;
+    --muted-dark: #b4c1d3;
+    --accent-bright: #3aa9ff;
+}
+
+body:not(.bukhara-page) {
+    background: linear-gradient(180deg, var(--page-light), #f5f8fc 55%, var(--page-light));
+}
+
+.place-city {
+    display: inline-flex;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: #075bb5;
+    background: #e8f3ff;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.homepage-hotel-placeholder {
+    height: 220px;
+    position: relative;
+    display: grid;
+    place-items: end start;
+    overflow: hidden;
+    padding: 20px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 76% 20%, rgba(244, 197, 102, .42), transparent 24%),
+        linear-gradient(140deg, #0c5990, #08213e 64%, #061326);
+}
+.homepage-hotel-placeholder::before {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    right: 24px;
+    bottom: -34px;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 50% 50% 0 0;
+    box-shadow: inset 0 0 0 20px rgba(255, 255, 255, .04);
+}
+.homepage-hotel-placeholder span {
+    position: relative;
+    z-index: 1;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 999px;
+    background: rgba(2, 15, 30, .32);
+    font-size: .75rem;
+    font-weight: 800;
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) {
+    --ink: var(--copy-dark);
+    --muted: var(--muted-dark);
+    --white: var(--surface-dark);
+    --cloud: #081323;
+    --line: rgba(151, 190, 235, .18);
+    background: var(--page-dark);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) main,
+html[data-theme="dark"] body:not(.bukhara-page) .section {
+    background: var(--page-dark);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .section-alt {
+    background: #081323;
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .navbar {
+    background: rgba(7, 16, 30, .9);
+    border-color: rgba(151, 190, 235, .14);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .card,
+html[data-theme="dark"] body:not(.bukhara-page) .search-panel {
+    color: var(--copy-dark);
+    background: var(--surface-dark);
+    border: 1px solid rgba(151, 190, 235, .16);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .3);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .place-city {
+    color: #bce5ff;
+    background: rgba(58, 169, 255, .18);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .footer {
+    color: var(--copy-dark);
+    background: #030914;
+    border-color: rgba(151, 190, 235, .14);
+}
+
+body.bukhara-page {
+    --bukhara-page: #fbfaf7;
+    --bukhara-surface: rgba(255, 255, 255, .94);
+    --bukhara-surface-solid: #ffffff;
+    --bukhara-tint: #f4f0e9;
+    --bukhara-border: rgba(18, 52, 83, .12);
+    --bukhara-copy: #152a40;
+    --bukhara-muted: #607184;
+    background: var(--bukhara-page);
+}
+
+html[data-theme="dark"] body.bukhara-page {
+    --ink: var(--copy-dark);
+    --muted: var(--muted-dark);
+    --white: var(--surface-dark);
+    --cloud: #081323;
+    --line: rgba(151, 190, 235, .18);
+    --bukhara-page: var(--page-dark);
+    --bukhara-surface: var(--surface-dark);
+    --bukhara-surface-solid: #091525;
+    --bukhara-tint: #081323;
+    --bukhara-border: rgba(151, 190, 235, .18);
+    --bukhara-copy: var(--copy-dark);
+    --bukhara-muted: var(--muted-dark);
+    color: var(--copy-dark);
+    background: var(--page-dark);
+}
+
+.bukhara-page .bukhara-section--tint { background: var(--bukhara-tint); }
+
+.bukhara-page .bukhara-place-card,
+.bukhara-page .bukhara-info-card,
+.bukhara-page .bukhara-stats article,
+.bukhara-page .bukhara-transport-grid article,
+.bukhara-page .bukhara-contact-grid a {
+    color: var(--bukhara-copy);
+    background: var(--bukhara-surface);
+    border: 1px solid var(--bukhara-border);
+    box-shadow: 0 16px 40px rgba(26, 55, 82, .09);
+}
+
+html[data-theme="dark"] .bukhara-page .bukhara-place-card,
+html[data-theme="dark"] .bukhara-page .bukhara-info-card,
+html[data-theme="dark"] .bukhara-page .bukhara-stats article,
+html[data-theme="dark"] .bukhara-page .bukhara-transport-grid article,
+html[data-theme="dark"] .bukhara-page .bukhara-contact-grid a {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+}
+
+.bukhara-page .bukhara-categories {
+    background: color-mix(in srgb, var(--bukhara-surface-solid) 92%, transparent);
+    border-color: var(--bukhara-border);
+}
+
+.bukhara-page .bukhara-categories a {
+    border: 1px solid transparent;
+    color: var(--bukhara-copy);
+}
+
+.bukhara-page .bukhara-categories a:hover,
+.bukhara-page .bukhara-categories a:focus-visible {
+    color: #075bb5;
+    background: #e7f3ff;
+    border-color: rgba(11, 111, 214, .2);
+    outline: none;
+}
+
+html[data-theme="dark"] .bukhara-page .bukhara-categories a {
+    color: #eff7ff;
+    background: var(--surface-dark-raised);
+    border-color: rgba(151, 190, 235, .18);
+}
+
+html[data-theme="dark"] .bukhara-page .bukhara-categories a:hover,
+html[data-theme="dark"] .bukhara-page .bukhara-categories a:focus-visible {
+    color: #ffffff;
+    background: #0d67bd;
+    border-color: #4bb2ff;
+}
+
+.bukhara-page .bukhara-map-links a,
+.bukhara-page .bukhara-card-actions a {
+    color: #075bb5;
+    background: #edf6ff;
+    border-color: rgba(11, 111, 214, .18);
+}
+
+html[data-theme="dark"] .bukhara-page .bukhara-map-links a,
+html[data-theme="dark"] .bukhara-page .bukhara-card-actions a {
+    color: #c6e9ff;
+    background: #142d48;
+    border-color: rgba(107, 191, 255, .24);
+}
+
+.bukhara-page .bukhara-map-links a:hover,
+.bukhara-page .bukhara-card-actions a:hover {
+    color: #fff;
+    background: #0876db;
+}
+
+.bukhara-photo-placeholder {
+    color: #f2f8ff;
+    background:
+        radial-gradient(circle at 74% 20%, rgba(246, 193, 88, .32), transparent 24%),
+        radial-gradient(circle at 18% 88%, rgba(61, 184, 230, .28), transparent 32%),
+        linear-gradient(140deg, #123f69 0%, #082139 55%, #0a182b 100%);
+}
+
+.bukhara-photo-placeholder span::before {
+    content: "◇";
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 9px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 14px;
+    color: #f7cf78;
+    background: rgba(255, 255, 255, .08);
+    font-size: 1.35rem;
+}
+
+#fast-food .bukhara-photo-placeholder span::before { content: "◎"; }
+#cafes .bukhara-photo-placeholder span::before { content: "☕"; }
+#hotels .bukhara-photo-placeholder span::before { content: "⌂"; }
+#pools .bukhara-photo-placeholder span::before { content: "≈"; }
+#shopping .bukhara-photo-placeholder span::before { content: "◇"; }
+
+.gallery-prev,
+.gallery-next {
+    width: 36px;
+    height: 36px;
+    border-color: rgba(255, 255, 255, .38);
+    background: rgba(3, 14, 28, .78);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .2);
+    transition: transform .2s ease, background .2s ease;
+}
+.gallery-prev:hover,
+.gallery-next:hover { background: #0876db; transform: scale(1.08); }
+
+.bukhara-info-card,
+.bukhara-place-card { transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease; }
+.bukhara-info-card:hover,
+.bukhara-place-card:hover { transform: translateY(-7px); border-color: rgba(49, 158, 244, .35); }
+
+.bukhara-local-photo-section { padding-top: 38px; padding-bottom: 38px; }
+.bukhara-local-photo-list {
+    border: 1px solid var(--bukhara-border);
+    border-radius: 22px;
+    color: var(--bukhara-copy);
+    background: var(--bukhara-surface);
+    box-shadow: 0 14px 34px rgba(20, 51, 78, .08);
+}
+.bukhara-local-photo-list summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 24px;
+    cursor: pointer;
+    list-style: none;
+}
+.bukhara-local-photo-list summary::-webkit-details-marker { display: none; }
+.bukhara-local-photo-list summary span { font-weight: 800; }
+.bukhara-local-photo-list summary small { color: var(--bukhara-muted); }
+.bukhara-local-photo-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding: 0 24px 24px;
+}
+.bukhara-local-photo-columns div { padding: 17px; border-radius: 16px; background: var(--bukhara-tint); }
+.bukhara-local-photo-columns h3 { margin-bottom: 7px; font-size: .9rem; }
+.bukhara-local-photo-columns p { color: var(--bukhara-muted); font-size: .78rem; }
+
+html[data-theme="dark"] .bukhara-page .footer {
+    color: var(--copy-dark);
+    background: #030914;
+    border-color: rgba(151, 190, 235, .14);
+}
+
+@media (max-width: 760px) {
+    .bukhara-local-photo-columns { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   Authoritative light / dark theme palette
+   Keep this final so older component declarations cannot leak
+   fixed light-mode colours into dark mode.
+   ========================================================= */
+:root,
+html[data-theme="light"] {
+    --theme-page: #f8f6f1;
+    --theme-section: #ffffff;
+    --theme-card: #ffffff;
+    --theme-card-secondary: #f3f6f8;
+    --theme-text: #0f172a;
+    --theme-text-secondary: #475569;
+    --theme-muted: #64748b;
+    --theme-blue: #1d9bf0;
+    --theme-gold: #d4a017;
+    --theme-border: rgba(15, 23, 42, 0.08);
+    --theme-nav: rgba(255, 255, 255, 0.92);
+    --theme-footer: #0b2035;
+    --theme-shadow: 0 16px 40px rgba(23, 50, 75, 0.09);
+}
+
+html[data-theme="dark"] {
+    --theme-page: #06101c;
+    --theme-section: #0a1830;
+    --theme-card: #10243a;
+    --theme-card-secondary: #16314d;
+    --theme-text: #f8fafc;
+    --theme-text-secondary: #cbd5e1;
+    --theme-muted: #94a3b8;
+    --theme-blue: #1d9bf0;
+    --theme-gold: #f4c95d;
+    --theme-border: rgba(255, 255, 255, 0.10);
+    --theme-nav: rgba(6, 16, 28, 0.94);
+    --theme-footer: #040b14;
+    --theme-shadow: 0 18px 46px rgba(0, 0, 0, 0.30);
+}
+
+body,
+body.bukhara-page {
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+.navbar,
+.bukhara-page .navbar {
+    color: var(--theme-text);
+    background: var(--theme-nav);
+    border-color: var(--theme-border);
+}
+
+.logo span,
+.nav-links a,
+.language-switch a,
+.bukhara-page .nav-links a,
+.bukhara-page .language-switch a {
+    color: var(--theme-text);
+}
+
+.logo,
+.section-kicker,
+.rating,
+.price,
+.bukhara-stats strong {
+    color: var(--theme-blue);
+}
+
+.section,
+body.bukhara-page .bukhara-section {
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+.section-alt,
+body.bukhara-page .bukhara-section--tint {
+    color: var(--theme-text);
+    background: var(--theme-section);
+}
+
+.section h2,
+.section h3,
+.section-head h2,
+.card h3,
+.tips-wrap h2,
+.bukhara-heading h2,
+.bukhara-about h2,
+.bukhara-place-card h3,
+.bukhara-info-card h3,
+.bukhara-transport-grid h3,
+.bukhara-contact-grid strong,
+.bukhara-local-photo-list h3 {
+    color: var(--theme-text);
+}
+
+.section p,
+.section-head p,
+.card p,
+.details,
+.tips-wrap p,
+.tip span,
+.bukhara-heading > p,
+.bukhara-about p,
+.bukhara-place-card p,
+.bukhara-info-card p,
+.bukhara-transport-grid p,
+.bukhara-local-photo-columns p {
+    color: var(--theme-text-secondary);
+}
+
+.search-item span,
+.bukhara-stats span,
+.bukhara-location,
+.bukhara-facts-list,
+.bukhara-contact-grid span,
+.bukhara-contact-grid small,
+.bukhara-local-photo-list summary small {
+    color: var(--theme-muted);
+}
+
+.card,
+.search-panel,
+.tips-wrap,
+.bukhara-page .bukhara-about,
+.bukhara-page .bukhara-stats article,
+.bukhara-page .bukhara-place-card,
+.bukhara-page .bukhara-info-card,
+.bukhara-page .bukhara-transport-grid article,
+.bukhara-page .bukhara-contact-grid a,
+.bukhara-local-photo-list {
+    color: var(--theme-text);
+    background: var(--theme-card);
+    border-color: var(--theme-border);
+    box-shadow: var(--theme-shadow);
+}
+
+.search-item,
+.tip,
+.bukhara-local-photo-columns div {
+    color: var(--theme-text);
+    background: var(--theme-card-secondary);
+    border-color: var(--theme-border);
+}
+
+.search-item strong,
+.tip strong {
+    color: var(--theme-text);
+}
+
+.bukhara-page .bukhara-categories {
+    color: var(--theme-text);
+    background: var(--theme-card);
+    border-color: var(--theme-border);
+    box-shadow: var(--theme-shadow);
+}
+
+.bukhara-page .bukhara-categories a,
+html[data-theme="dark"] .bukhara-page .bukhara-categories a {
+    color: var(--theme-text);
+    background: var(--theme-card-secondary);
+    border: 1px solid var(--theme-border);
+}
+
+.bukhara-page .bukhara-categories a span,
+html[data-theme="dark"] .bukhara-page .bukhara-categories a span {
+    color: var(--theme-blue);
+    background: transparent;
+}
+
+.bukhara-page .bukhara-categories a:hover,
+.bukhara-page .bukhara-categories a:focus-visible,
+html[data-theme="dark"] .bukhara-page .bukhara-categories a:hover,
+html[data-theme="dark"] .bukhara-page .bukhara-categories a:focus-visible {
+    color: #ffffff;
+    background: var(--theme-blue);
+    border-color: var(--theme-blue);
+}
+
+.btn-primary,
+.mini-btn,
+.bukhara-page .bukhara-map-links a:hover,
+.bukhara-page .bukhara-card-actions a:hover {
+    color: #ffffff;
+    background: var(--theme-blue);
+    border-color: var(--theme-blue);
+}
+
+.bukhara-page .bukhara-map-links a,
+.bukhara-page .bukhara-card-actions a {
+    color: var(--theme-blue);
+    background: var(--theme-card-secondary);
+    border-color: var(--theme-border);
+}
+
+.theme-toggle,
+.bukhara-theme-toggle {
+    color: var(--theme-blue);
+    background: var(--theme-card);
+    border-color: var(--theme-border);
+}
+
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .bukhara-theme-toggle {
+    color: var(--theme-gold);
+    background: var(--theme-card-secondary);
+    border-color: var(--theme-border);
+}
+
+.footer,
+.bukhara-page .footer,
+html[data-theme="dark"] .bukhara-page .footer,
+html[data-theme="dark"] body:not(.bukhara-page) .footer {
+    color: #f8fafc;
+    background: var(--theme-footer);
+    border-color: var(--theme-border);
+}
+
+.footer h3,
+.footer h4,
+.footer a {
+    color: #f8fafc;
+}
+
+.footer p,
+.footer .copyright {
+    color: #cbd5e1;
+}
+
+/* Both animated heroes intentionally remain dark in either theme. */
+.uz-home-hero,
+.bukhara-silk-hero,
+.bukhara-hero {
+    color: #f8fafc;
+}
+
+.uz-home-hero h1,
+.uz-home-hero .hero-content h1,
+.bukhara-hero h1,
+.bukhara-silk-hero h1 {
+    color: #f8fafc;
+}
+
+.uz-home-hero .hero-content p,
+.bukhara-hero__content > p,
+.bukhara-silk-hero .bukhara-hero__content > p {
+    color: #cbd5e1;
+}
+
+.uz-home-hero .eyebrow,
+.bukhara-silk-hero .eyebrow {
+    color: #f8fafc;
+}
+
+.bukhara-live-time {
+    color: #f8fafc;
+    background: rgba(16, 36, 58, 0.82);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.bukhara-live-time strong {
+    color: #f8fafc;
+}
+
+.bukhara-live-time span,
+.bukhara-live-time small {
+    color: #cbd5e1;
+}
+
+.bukhara-hero__facts span {
+    color: #f8fafc;
+    background: rgba(16, 36, 58, 0.78);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.bukhara-hero__facts strong {
+    color: #f8fafc;
+}
+
+.uz-home-hero .btn-light,
+.bukhara-silk-hero .btn-light {
+    color: #06101c;
+    background: #f8fafc;
+    border-color: #f8fafc;
+}
+
+.uz-home-hero .btn-ghost,
+.bukhara-silk-hero .btn-ghost {
+    color: #f8fafc;
+    background: rgba(16, 36, 58, 0.50);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+html[data-theme="dark"] .place-city {
+    color: #d9efff;
+    background: var(--theme-card-secondary);
+}
+
+html[data-theme="dark"] .bukhara-status {
+    color: #d8f7e9;
+    background: #163d38;
+}
+
+html[data-theme="dark"] .bukhara-status--photo {
+    color: #fde8a6;
+    background: #493b1c;
+}
+
+/* Specificity guards for legacy theme declarations above. */
+html[data-theme="dark"] body:not(.bukhara-page) {
+    --ink: var(--theme-text);
+    --text: var(--theme-text);
+    --muted: var(--theme-muted);
+    --white: var(--theme-card);
+    --cloud: var(--theme-section);
+    --surface: var(--theme-card);
+    --surface-soft: var(--theme-card-secondary);
+    --border: var(--theme-border);
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) main,
+html[data-theme="dark"] body:not(.bukhara-page) .section {
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .section-alt {
+    color: var(--theme-text);
+    background: var(--theme-section);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .navbar {
+    color: var(--theme-text);
+    background: var(--theme-nav);
+    border-color: var(--theme-border);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) .card,
+html[data-theme="dark"] body:not(.bukhara-page) .search-panel,
+html[data-theme="dark"] body:not(.bukhara-page) .tips-wrap {
+    color: var(--theme-text);
+    background: var(--theme-card);
+    border-color: var(--theme-border);
+    box-shadow: var(--theme-shadow);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) h1,
+html[data-theme="dark"] body:not(.bukhara-page) h2,
+html[data-theme="dark"] body:not(.bukhara-page) h3,
+html[data-theme="dark"] body:not(.bukhara-page) strong,
+html[data-theme="dark"] body:not(.bukhara-page) .nav-links a {
+    color: var(--theme-text);
+}
+
+html[data-theme="dark"] body:not(.bukhara-page) p,
+html[data-theme="dark"] body:not(.bukhara-page) .details,
+html[data-theme="dark"] body:not(.bukhara-page) .search-item span {
+    color: var(--theme-text-secondary);
+}
+
+html[data-theme="dark"] body.bukhara-page {
+    --ink: var(--theme-text);
+    --muted: var(--theme-muted);
+    --white: var(--theme-card);
+    --cloud: var(--theme-section);
+    --bukhara-page: var(--theme-page);
+    --bukhara-surface: var(--theme-card);
+    --bukhara-surface-solid: var(--theme-card);
+    --bukhara-tint: var(--theme-section);
+    --bukhara-border: var(--theme-border);
+    --bukhara-copy: var(--theme-text);
+    --bukhara-muted: var(--theme-muted);
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+html[data-theme="dark"] body.bukhara-page .bukhara-section {
+    color: var(--theme-text);
+    background: var(--theme-page);
+}
+
+html[data-theme="dark"] body.bukhara-page .bukhara-section--tint {
+    color: var(--theme-text);
+    background: var(--theme-section);
+}
+
+html[data-theme="dark"] body.bukhara-page .bukhara-about,
+html[data-theme="dark"] body.bukhara-page .bukhara-stats article,
+html[data-theme="dark"] body.bukhara-page .bukhara-place-card,
+html[data-theme="dark"] body.bukhara-page .bukhara-info-card,
+html[data-theme="dark"] body.bukhara-page .bukhara-transport-grid article,
+html[data-theme="dark"] body.bukhara-page .bukhara-contact-grid a {
+    color: var(--theme-text);
+    background: var(--theme-card);
+    border-color: var(--theme-border);
+}
+
+html[data-theme="dark"] body.bukhara-page .bukhara-heading p,
+html[data-theme="dark"] body.bukhara-page .bukhara-info-card p,
+html[data-theme="dark"] body.bukhara-page .bukhara-place-card p,
+html[data-theme="dark"] body.bukhara-page .bukhara-about p {
+    color: var(--theme-text-secondary);
+}
+
+/* =========================================================
+   Photo presentation pass: spacing and premium placeholders
+   ========================================================= */
+.uz-home-hero { min-height: 720px; }
+.uz-home-hero .hero-content {
+    padding-top: clamp(145px, 15vh, 170px);
+    padding-bottom: 105px;
+}
+
+.bukhara-info-card > .bukhara-card-gallery,
+.bukhara-directory-card > img,
+.bukhara-directory-placeholder,
+.bukhara-gallery__slide { height: 220px; }
+
+.bukhara-info-card > .bukhara-card-gallery,
+.bukhara-directory-card > img,
+.bukhara-directory-placeholder {
+    overflow: hidden;
+    border-radius: 21px 21px 0 0;
+}
+
+.bukhara-directory-card > img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .55s cubic-bezier(.2, .7, .2, 1), filter .55s ease;
+}
+
+.bukhara-directory-card:hover > img {
+    transform: scale(1.045);
+    filter: saturate(1.06) contrast(1.02);
+}
+
+.bukhara-photo-placeholder {
+    --placeholder-icon: "✦";
+    isolation: isolate;
+    padding: 24px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 78% 16%, rgba(255, 255, 255, .18), transparent 24%),
+        radial-gradient(circle at 12% 94%, rgba(255, 220, 142, .20), transparent 34%),
+        linear-gradient(138deg, #53301e 0%, #9a5b36 50%, #301b20 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+    transition: transform .38s ease, filter .38s ease;
+}
+
+.bukhara-photo-placeholder::before {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    z-index: 2;
+    inset: auto;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 13px;
+    border: 1px solid rgba(255, 255, 255, .34);
+    border-radius: 18px;
+    content: var(--placeholder-icon);
+    color: #fff4d6;
+    background: rgba(255, 255, 255, .10);
+    box-shadow: 0 12px 28px rgba(18, 8, 5, .18), inset 0 1px rgba(255, 255, 255, .18);
+    transform: none;
+    font-size: 1.7rem;
+    line-height: 1;
+    backdrop-filter: blur(8px);
+}
+
+.bukhara-photo-placeholder::after {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    z-index: 0;
+    right: -66px;
+    bottom: -92px;
+    left: auto;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 50%;
+    content: "";
+    box-shadow: inset 0 0 0 24px rgba(255, 255, 255, .035);
+    transform: none;
+}
+
+.bukhara-photo-placeholder span,
+.bukhara-photo-placeholder small {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .22);
+}
+
+.bukhara-photo-placeholder span {
+    font-size: .92rem;
+    letter-spacing: .015em;
+}
+
+.bukhara-photo-placeholder small {
+    max-width: 220px;
+    margin: 6px auto 0;
+    color: rgba(255, 255, 255, .74);
+    font-size: .72rem;
+    line-height: 1.4;
+}
+
+.bukhara-rich-card:hover .bukhara-photo-placeholder,
+.bukhara-directory-card:hover .bukhara-photo-placeholder {
+    filter: saturate(1.08) brightness(1.035);
+}
+
+.bukhara-gallery__track .bukhara-photo-placeholder:nth-child(even) {
+    background-position: 100% 100%, 0 0, 0 0;
+    filter: hue-rotate(-7deg) brightness(.96);
+}
+
+/* Restaurant: warm dining room tones and tableware symbol. */
+#restaurants .bukhara-photo-placeholder {
+    --placeholder-icon: "🍽︎";
+    background:
+        radial-gradient(circle at 78% 18%, rgba(255, 212, 132, .34), transparent 24%),
+        radial-gradient(circle at 16% 90%, rgba(185, 70, 45, .30), transparent 34%),
+        linear-gradient(138deg, #3a1c20 0%, #9b4f32 52%, #d09156 100%);
+}
+
+/* Fast food: bold brand-led panels without pretending to be branch photography. */
+#fast-food .bukhara-photo-placeholder {
+    --placeholder-icon: "★";
+    background:
+        linear-gradient(112deg, rgba(255, 255, 255, .10) 0 10%, transparent 10% 18%, rgba(255, 255, 255, .06) 18% 28%, transparent 28%),
+        linear-gradient(138deg, #17233b, #e04a2f);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="KFC"] .bukhara-photo-placeholder {
+    --placeholder-icon: "KFC";
+    background: linear-gradient(120deg, #7d1018 0 24%, #e4002b 24% 72%, #f7f1e8 72% 82%, #b81220 82%);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="Bellissimo"] .bukhara-photo-placeholder {
+    --placeholder-icon: "B";
+    background: radial-gradient(circle at 78% 18%, rgba(255, 222, 78, .35), transparent 25%), linear-gradient(138deg, #b91c1c, #ef3e2f 52%, #f4b323);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="Les Ailes"] .bukhara-photo-placeholder {
+    --placeholder-icon: "LA";
+    background: radial-gradient(circle at 75% 22%, rgba(255, 255, 255, .22), transparent 24%), linear-gradient(138deg, #ef7b21, #ed1f24 58%, #8d1219);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="Dots Chicken"] .bukhara-photo-placeholder {
+    --placeholder-icon: "D";
+    background: radial-gradient(circle at 80% 20%, rgba(255, 230, 91, .28), transparent 23%), linear-gradient(138deg, #121c35, #263a72 55%, #f2a51a);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="Shef Burger"] .bukhara-photo-placeholder {
+    --placeholder-icon: "SB";
+    background: radial-gradient(circle at 78% 20%, rgba(255, 196, 74, .30), transparent 24%), linear-gradient(138deg, #171717, #403221 56%, #c88b2f);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="Orzu Burger"] .bukhara-photo-placeholder {
+    --placeholder-icon: "OB";
+    background: radial-gradient(circle at 80% 18%, rgba(255, 255, 255, .18), transparent 23%), linear-gradient(138deg, #166534, #22a55b 58%, #e2ac2f);
+}
+
+#fast-food .bukhara-card-gallery[aria-label^="KFC"] .bukhara-photo-placeholder::before,
+#fast-food .bukhara-card-gallery[aria-label^="Les Ailes"] .bukhara-photo-placeholder::before,
+#fast-food .bukhara-card-gallery[aria-label^="Shef Burger"] .bukhara-photo-placeholder::before,
+#fast-food .bukhara-card-gallery[aria-label^="Orzu Burger"] .bukhara-photo-placeholder::before {
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+/* Cafe: roasted coffee, caramel and cream. */
+#cafes .bukhara-photo-placeholder {
+    --placeholder-icon: "☕";
+    background:
+        radial-gradient(circle at 80% 17%, rgba(255, 229, 180, .34), transparent 25%),
+        radial-gradient(circle at 14% 92%, rgba(214, 154, 86, .25), transparent 33%),
+        linear-gradient(138deg, #2b1b19, #74503c 53%, #b98356);
+}
+
+/* Hotels: deep jewel tones with warm brass highlights. */
+#hotels .bukhara-photo-placeholder {
+    --placeholder-icon: "▦";
+    background:
+        radial-gradient(circle at 78% 18%, rgba(244, 201, 93, .34), transparent 25%),
+        linear-gradient(145deg, #081b35 0%, #173d61 58%, #8b6431 100%);
+}
+
+/* Pools: layered water light and aquatic blues. */
+#pools .bukhara-photo-placeholder {
+    --placeholder-icon: "≋";
+    background:
+        radial-gradient(ellipse at 74% 16%, rgba(190, 245, 255, .43), transparent 25%),
+        repeating-radial-gradient(ellipse at 10% 115%, transparent 0 20px, rgba(255, 255, 255, .10) 21px 23px),
+        linear-gradient(138deg, #063b62, #078cb4 55%, #51c8d6);
+}
+
+/* Parks: layered foliage and sunlight. */
+#parks .bukhara-photo-placeholder {
+    --placeholder-icon: "♣";
+    background:
+        radial-gradient(circle at 80% 18%, rgba(239, 220, 116, .36), transparent 25%),
+        radial-gradient(circle at 12% 92%, rgba(105, 190, 112, .32), transparent 34%),
+        linear-gradient(138deg, #123d2c, #26704c 55%, #6b9b51);
+}
+
+/* Shopping: glass, steel and a restrained violet-blue accent. */
+#shopping .bukhara-photo-placeholder {
+    --placeholder-icon: "🛍︎";
+    background:
+        linear-gradient(118deg, transparent 0 52%, rgba(255, 255, 255, .10) 52% 54%, transparent 54%),
+        radial-gradient(circle at 79% 18%, rgba(217, 197, 255, .30), transparent 25%),
+        linear-gradient(138deg, #17254a, #4551a3 56%, #7f58a8);
+}
+
+#restaurants .bukhara-photo-placeholder span::before,
+#fast-food .bukhara-photo-placeholder span::before,
+#cafes .bukhara-photo-placeholder span::before,
+#hotels .bukhara-photo-placeholder span::before,
+#pools .bukhara-photo-placeholder span::before,
+#parks .bukhara-photo-placeholder span::before,
+#shopping .bukhara-photo-placeholder span::before {
+    display: none;
+    content: none;
+}
+
+body.bukhara-page .bukhara-photo-placeholder span {
+    color: #fff;
+    font-size: .92rem;
+}
+
+body.bukhara-page .bukhara-photo-placeholder small {
+    color: rgba(255, 255, 255, .78);
+}
+
+/* Homepage city cards: honest fallback when exact reusable photography is unavailable. */
+.city-card .city-image-placeholder {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-content: center;
+    gap: 4px;
+    overflow: hidden;
+    padding: 24px;
+    color: #fff;
+    text-align: center;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(244, 201, 93, .34), transparent 24%),
+        radial-gradient(circle at 12% 94%, rgba(29, 155, 240, .30), transparent 32%),
+        linear-gradient(138deg, #071a34, #123f69 58%, #176f91);
+}
+
+.city-card .city-image-placeholder::before,
+.city-card .city-image-placeholder::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, .14);
+    transform: rotate(45deg);
+}
+
+.city-card .city-image-placeholder::before {
+    width: 130px;
+    height: 130px;
+    top: -68px;
+    right: -30px;
+}
+
+.city-card .city-image-placeholder::after {
+    width: 76px;
+    height: 76px;
+    bottom: -42px;
+    left: 28px;
+}
+
+.city-card .city-image-placeholder span {
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+}
+
+.city-card .city-image-placeholder small {
+    color: rgba(255, 255, 255, .72);
+    font-size: .72rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* Homepage hotel media: three city-specific architectural visuals. */
+.homepage-hotel-placeholder {
+    isolation: isolate;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+    transition: filter .35s ease, transform .35s ease;
+}
+
+.media-card:hover .homepage-hotel-placeholder {
+    filter: saturate(1.08) brightness(1.035);
+}
+
+.homepage-hotel-placeholder span {
+    z-index: 4;
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.homepage-hotel-visual--tashkent {
+    background:
+        linear-gradient(90deg, transparent 0 7%, rgba(137, 224, 255, .10) 7% 8%, transparent 8% 16%, rgba(137, 224, 255, .08) 16% 17%, transparent 17%),
+        radial-gradient(circle at 78% 18%, rgba(104, 220, 255, .38), transparent 25%),
+        linear-gradient(142deg, #04172f 0%, #0b4a7d 57%, #168faf 100%);
+}
+
+.homepage-hotel-visual--tashkent::before {
+    width: 92px;
+    height: 184px;
+    right: 48px;
+    bottom: -28px;
+    border: 1px solid rgba(178, 231, 255, .42);
+    border-radius: 9px 9px 0 0;
+    background:
+        repeating-linear-gradient(180deg, transparent 0 16px, rgba(182, 234, 255, .18) 17px 18px),
+        linear-gradient(105deg, rgba(255, 255, 255, .08), rgba(4, 34, 62, .32));
+    box-shadow: -70px 42px 0 -12px rgba(9, 53, 87, .76), inset 14px 0 rgba(255, 255, 255, .035);
+}
+
+.homepage-hotel-visual--tashkent::after {
+    width: 150px;
+    height: 1px;
+    position: absolute;
+    right: 16px;
+    bottom: 36px;
+    content: "";
+    background: linear-gradient(90deg, transparent, rgba(158, 229, 255, .65), transparent);
+    box-shadow: 0 -44px rgba(158, 229, 255, .13), 0 -88px rgba(158, 229, 255, .10);
+}
+
+.homepage-hotel-visual--samarkand {
+    background:
+        repeating-conic-gradient(from 45deg at 78% 30%, rgba(255, 255, 255, .09) 0 8deg, transparent 8deg 22deg),
+        radial-gradient(circle at 76% 18%, rgba(244, 201, 93, .38), transparent 25%),
+        linear-gradient(142deg, #062b45 0%, #087c8d 55%, #a67635 100%);
+}
+
+.homepage-hotel-visual--samarkand::before {
+    width: 126px;
+    height: 156px;
+    right: 34px;
+    bottom: -22px;
+    border: 1px solid rgba(255, 231, 169, .38);
+    border-radius: 64px 64px 3px 3px;
+    background: rgba(3, 48, 69, .40);
+    box-shadow: inset 0 0 0 20px rgba(46, 189, 190, .12), inset 0 0 0 21px rgba(255, 226, 149, .13);
+}
+
+.homepage-hotel-visual--samarkand::after {
+    width: 76px;
+    height: 58px;
+    position: absolute;
+    right: 59px;
+    bottom: 112px;
+    content: "";
+    border-radius: 50% 50% 8px 8px;
+    background: linear-gradient(145deg, #34c6ca, #08778c);
+    box-shadow: 0 -7px 22px rgba(116, 244, 233, .24);
+}
+
+.homepage-hotel-visual--bukhara {
+    background:
+        linear-gradient(28deg, transparent 47%, rgba(255, 236, 190, .08) 48% 49%, transparent 50%),
+        radial-gradient(circle at 80% 17%, rgba(255, 205, 113, .42), transparent 24%),
+        linear-gradient(142deg, #3f1e1b 0%, #9a5135 56%, #d39a5b 100%);
+    background-size: 42px 74px, auto, auto;
+}
+
+.homepage-hotel-visual--bukhara::before {
+    width: 138px;
+    height: 118px;
+    right: 22px;
+    bottom: -16px;
+    border: 1px solid rgba(255, 229, 174, .34);
+    border-radius: 50% 50% 6px 6px;
+    background: linear-gradient(145deg, rgba(16, 103, 125, .78), rgba(7, 54, 74, .92));
+    box-shadow: inset 0 0 0 17px rgba(255, 255, 255, .035), -62px 39px 0 -31px rgba(87, 37, 28, .76);
+}
+
+.homepage-hotel-visual--bukhara::after {
+    width: 18px;
+    height: 142px;
+    position: absolute;
+    right: 174px;
+    bottom: -18px;
+    content: "";
+    border: 1px solid rgba(255, 224, 163, .28);
+    border-radius: 8px 8px 0 0;
+    background: repeating-linear-gradient(180deg, #713423 0 15px, #9a5135 16px 20px);
+    box-shadow: 0 -7px 0 -4px #f0c16c;
+}
+
+@media (max-width: 900px) {
+    .uz-home-hero .hero-content {
+        padding-top: 150px;
+        padding-bottom: 110px;
+    }
+}
+
+@media (max-width: 640px) {
+    .uz-home-hero { min-height: 680px; }
+    .uz-home-hero .hero-content {
+        margin-left: 0;
+        padding: 145px 20px 105px;
+    }
+
+    .bukhara-info-card > .bukhara-card-gallery,
+    .bukhara-directory-card > img,
+    .bukhara-directory-placeholder,
+    .bukhara-gallery__slide { height: 205px; }
 }
