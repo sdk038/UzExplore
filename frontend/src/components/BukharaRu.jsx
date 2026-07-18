@@ -5,12 +5,12 @@ export default function BukharaRu() {
     <div>
       <header className="navbar">
         <div className="nav-inner">
-          <a className="logo" href="index-ru.html">Uz<span>Explore</span></a>
+          <a className="logo" href="/ru">Uz<span>Explore</span></a>
           <nav className="nav-links" aria-label="Основная навигация">
-            <a href="index-ru.html#home">Главная</a><a href="index-ru.html#cities">Города</a><a href="#attractions">Достопримечательности</a><a href="#restaurants">Рестораны</a><a href="#hotels">Отели</a><a href="#contacts">Контакты</a>
+            <a href="/ru#home">Главная</a><a href="/ru#cities">Города</a><a href="#attractions">Достопримечательности</a><a href="#restaurants">Рестораны</a><a href="#hotels">Отели</a><a href="#contacts">Контакты</a>
           </nav>
           <div className="nav-actions"><button className="bukhara-theme-toggle" type="button" aria-label="Переключить тему" title="Переключить тему"><span aria-hidden="true">◐</span></button>
-            <div className="language-switch" aria-label="Выбор языка"><a href="bukhara.html" aria-label="Английский">EN</a><a className="active" href="bukhara-ru.html" aria-label="Русский">RU</a></div>
+            <div className="language-switch" aria-label="Выбор языка"><a href="/bukhara" aria-label="Английский">EN</a><a className="active" href="/ru/bukhara" aria-label="Русский">RU</a></div>
             <a className="btn btn-primary" href="#categories">Исследовать Бухару</a>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function BukharaRu() {
           </div></section>
         {/* Источники фактов и атрибуция изображений сохранены в URL материалов и фотографий. */}
       </main>
-      <footer className="footer"><div className="footer-inner"><div className="footer-grid"><div><h3>UzExplore</h3><p>Премиальное вдохновение для путешествий по городам, отелям, ресторанам и культурным местам Узбекистана.</p></div><div><h4>Путеводитель</h4><a href="#attractions">Достопримечательности</a><a href="#restaurants">Еда</a><a href="#hotels">Отели</a></div><div><h4>Планирование</h4><a href="#transport">Транспорт</a><a href="#contacts">Контакты</a><a href="#top">Наверх</a></div><div><h4>Язык</h4><a href="bukhara.html">Английский</a><a href="bukhara-ru.html">Русский</a></div></div><p className="copyright">© 2026 UzExplore</p></div></footer>
+      <footer className="footer"><div className="footer-inner"><div className="footer-grid"><div><h3>UzExplore</h3><p>Премиальное вдохновение для путешествий по городам, отелям, ресторанам и культурным местам Узбекистана.</p></div><div><h4>Путеводитель</h4><a href="#attractions">Достопримечательности</a><a href="#restaurants">Еда</a><a href="#hotels">Отели</a></div><div><h4>Планирование</h4><a href="#transport">Транспорт</a><a href="#contacts">Контакты</a><a href="#top">Наверх</a></div><div><h4>Язык</h4><a href="/bukhara">Английский</a><a href="/ru/bukhara">Русский</a></div></div><p className="copyright">© 2026 UzExplore</p></div></footer>
     </div>
   );
 }

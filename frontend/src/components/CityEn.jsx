@@ -16,13 +16,13 @@ export default function CityEn() {
   return (
     <div>
       <header className="navbar"><div className="nav-inner">
-        <a className="logo" href="index.html">Uz<span>Explore</span></a>
+        <a className="logo" href="/">Uz<span>Explore</span></a>
         <nav className="nav-links" aria-label="Destination navigation"><a href="#places">Places</a><a href="#hotels">Hotels</a><a href="#mobility">Transport</a><a href="#plan">Itinerary</a></nav>
-        <div className="nav-actions"><button className="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button><a className="language-switch destination-language" href={`city-ru.html?city=${slug}`}>RU</a></div>
+        <div className="nav-actions"><button className="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button><a className="language-switch destination-language" href={`/ru/city?city=${slug}`}>RU</a></div>
       </div></header>
       <main id="destination-root">
         <section className="destination-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(3,21,39,.88),rgba(4,68,78,.48)),url('${city.photo}')`}}><div>
-          <a className="destination-back" href="index.html#cities">← All destinations</a><span>{city.region}</span><h1>{city.name}</h1><p>{city.tagline}</p>
+          <a className="destination-back" href="/#cities">← All destinations</a><span>{city.region}</span><h1>{city.name}</h1><p>{city.tagline}</p>
           <div className="destination-facts"><span><b>{city.days}</b> recommended</span><span><b>{city.season}</b> best season</span><span><b>{city.center}</b> destination center</span></div>
         </div></section>
         <section className="destination-section destination-intro"><div><span className="section-kicker">About the region</span><h2>Plan your journey</h2></div><p>{city.about}</p></section>

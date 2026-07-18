@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { currentPathForLocale } from '../app/routes.js';
 
 const storage = { user: 'uzexplore-user', bookings: 'uzexplore-bookings' };
 
 const copy = {
   en: {
     aria: 'Primary navigation',
-    nav: [['#home', 'Home'], ['#cities', 'Cities'], ['#attractions', 'Attractions'], ['#restaurants', 'Restaurants'], ['#hotels', 'Hotels'], ['#contact', 'Contact']],
+    nav: [['#home', 'Home'], ['#cities', 'Cities'], ['/guides', 'Guides'], ['#attractions', 'Attractions'], ['#restaurants', 'Restaurants'], ['#hotels', 'Hotels'], ['#contact', 'Contact']],
     theme: 'Toggle theme', language: 'Language selector', english: 'English', russian: 'Russian', explore: 'Explore Now', login: 'Sign in', trips: 'My trips',
     create: 'Create account', intro: 'Register to save bookings on this device.', name: 'Name', email: 'Email', phone: 'Phone', accept: 'I accept the service terms',
     register: 'Register', empty: 'You have no bookings yet.', cancel: 'Cancel booking', logout: 'Sign out', hello: 'Hello', close: 'Close'
   },
   ru: {
     aria: 'Основная навигация',
-    nav: [['#home', 'Главная'], ['#cities', 'Города'], ['#attractions', 'Достопримечательности'], ['#restaurants', 'Рестораны'], ['#hotels', 'Отели'], ['#contact', 'Контакты']],
+    nav: [['#home', 'Главная'], ['#cities', 'Города'], ['/ru/guides', 'Гиды'], ['#attractions', 'Достопримечательности'], ['#restaurants', 'Рестораны'], ['#hotels', 'Отели'], ['#contact', 'Контакты']],
     theme: 'Переключить тему', language: 'Выбор языка', english: 'Английский', russian: 'Русский', explore: 'Исследовать', login: 'Войти', trips: 'Мои поездки',
     create: 'Создать аккаунт', intro: 'Регистрация нужна для сохранения броней на этом устройстве.', name: 'Имя', email: 'Электронная почта', phone: 'Телефон',
     accept: 'Я принимаю условия сервиса', register: 'Зарегистрироваться', empty: 'У вас пока нет бронирований.', cancel: 'Отменить бронь', logout: 'Выйти из аккаунта',
@@ -25,7 +26,7 @@ function read(key, fallback) {
   catch { return fallback; }
 }
 
-export default function SiteHeader({ locale }) {
+export default function SiteHeader({ locale, page = 'home' }) {
   const text = copy[locale];
   const [user, setUser] = useState(() => read(storage.user, null));
   const [modal, setModal] = useState(false);
@@ -62,17 +63,20 @@ export default function SiteHeader({ locale }) {
     <>
       <header className="navbar">
         <div className="nav-inner">
-          <a className="logo" href={locale === 'ru' ? 'index-ru.html' : 'index.html'}>Uz<span>Explore</span></a>
+          <a className="logo" href={locale === 'ru' ? '/ru' : '/'}>Uz<span>Explore</span></a>
           <nav className="nav-links" aria-label={text.aria}>
-            {text.nav.map(([href, label]) => <a href={href} key={href}>{label}</a>)}
+            {text.nav.map(([href, label]) => {
+              const target = page !== 'home' && href.startsWith('#') ? `${locale === 'ru' ? '/ru' : ''}/${href}` : href;
+              return <a href={target} key={href}>{label}</a>;
+            })}
           </nav>
           <div className="nav-actions">
             <button className="theme-toggle" type="button" aria-label={text.theme}><span aria-hidden="true">◐</span></button>
             <div className="language-switch" aria-label={text.language}>
-              <a className={locale === 'en' ? 'active' : undefined} href="index.html" aria-label={text.english}>EN</a>
-              <a className={locale === 'ru' ? 'active' : undefined} href="index-ru.html" aria-label={text.russian}>RU</a>
+              <a className={locale === 'en' ? 'active' : undefined} href={currentPathForLocale('en')} aria-label={text.english}>EN</a>
+              <a className={locale === 'ru' ? 'active' : undefined} href={currentPathForLocale('ru')} aria-label={text.russian}>RU</a>
             </div>
-            <a className="btn btn-primary header-explore" href="#cities">{text.explore}</a>
+            <a className="btn btn-primary header-explore" href={page === 'home' ? '#cities' : `${locale === 'ru' ? '/ru' : ''}/#cities`}>{text.explore}</a>
             <button className="account-button" data-account type="button" onClick={openAccount}>{user ? text.trips : text.login}</button>
           </div>
         </div>

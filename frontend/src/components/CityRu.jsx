@@ -5,11 +5,11 @@ export default function CityRu() {
     <div>
       <header className="navbar">
         <div className="nav-inner">
-          <a className="logo" href="index-ru.html">Uz<span>Explore</span></a>
+          <a className="logo" href="/ru">Uz<span>Explore</span></a>
           <nav className="nav-links" aria-label="Навигация по направлению">
             <a href="#places">Что посмотреть</a><a href="#hotels">Отели</a><a href="#mobility">Транспорт</a><a href="#plan">Маршрут</a>
           </nav>
-          <div className="nav-actions"><button className="theme-toggle" type="button" aria-label="Переключить тему"><span aria-hidden="true">◐</span></button></div>
+          <div className="nav-actions"><button className="theme-toggle" type="button" aria-label="Переключить тему"><span aria-hidden="true">◐</span></button><a className="language-switch destination-language" href={`/city${location.search}`}>EN</a></div>
         </div>
       </header>
       <main id="destination-root"><div className="destination-loading">Готовим путеводитель…</div></main>

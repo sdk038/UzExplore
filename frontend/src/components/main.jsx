@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import { currentPath } from '../app/routes.js';
 import '../static/base.css';
 import '../static/home.css';
 import '../static/bukhara.css';
@@ -8,22 +9,27 @@ import '../static/theme.css';
 import '../static/media.css';
 import '../static/hero.css';
 import '../static/app.css';
-const pageName = location.pathname.split('/').pop() || 'index.html';
+import '../static/guides.css';
+const pagePath = currentPath();
 const pages = {
-  'index.html': () => import('./HomeEn.jsx'),
-  'index-ru.html': () => import('./HomeRu.jsx'),
-  'bukhara.html': () => import('./BukharaEn.jsx'),
-  'bukhara-ru.html': () => import('./BukharaRu.jsx'),
-  'city.html': () => import('./CityEn.jsx'),
-  'city-ru.html': () => import('./CityRu.jsx')
+  '/': () => import('./HomeEn.jsx'),
+  '/ru': () => import('./HomeRu.jsx'),
+  '/bukhara': () => import('./BukharaEn.jsx'),
+  '/ru/bukhara': () => import('./BukharaRu.jsx'),
+  '/samarkand': () => import('./Samarkand-en.jsx'),
+  '/ru/samarkand': () => import('./SamarkandRu.jsx'),
+  '/guides': () => import('./GuidesEn.jsx'),
+  '/ru/guides': () => import('./GuidesEn.jsx'),
+  '/city': () => import('./CityEn.jsx'),
+  '/ru/city': () => import('./CityRu.jsx')
 };
-const Page = React.lazy(pages[pageName] || pages['index.html']);
+const Page = React.lazy(pages[pagePath] || pages['/']);
 
 function PageBoot() {
   useEffect(() => {
     const boot = async () => {
       await import('../pages/script.js');
-      if (pageName === 'index-ru.html' || pageName === 'city-ru.html') {
+      if (pagePath === '/ru' || pagePath === '/ru/city') {
         await import('../pages/platform.js');
       }
     };
