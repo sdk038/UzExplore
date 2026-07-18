@@ -19,51 +19,51 @@ export default function HomeEn() {
           <div className="grid cities-grid">
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20City%20Park%20at%20night.jpg?width=1000" alt="Tashkent City Park at night" loading="lazy" /></div>
-              <div className="card-body"><h3>Tashkent</h3><p>A lively capital with leafy boulevards, museums, markets, and modern dining.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=tashkent">Explore</a></div></div>
+              <div className="card-body"><h3>Tashkent</h3><p>A lively capital with leafy boulevards, museums, markets, and modern dining.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=tashkent">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan-Samarkand.jpg?width=1000" alt="Registan ensemble in Samarkand" loading="lazy" /></div>
-              <div className="card-body"><h3>Samarkand</h3><p>Legendary monuments, grand squares, and shimmering Timurid tilework.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=samarkand">Explore</a></div></div>
+              <div className="card-body"><h3>Samarkand</h3><p>Legendary monuments, grand squares, and shimmering Timurid tilework.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=samarkand">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Poi Kalyan complex in Bukhara" loading="lazy" /></div>
-              <div className="card-body"><h3>Bukhara</h3><p>A warm old city of minarets, caravanserais, courtyards, and craft ateliers.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="bukhara.html">Explore</a></div></div>
+              <div className="card-body"><h3>Bukhara</h3><p>A warm old city of minarets, caravanserais, courtyards, and craft ateliers.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/bukhara">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Itchan Kala old city in Khiva" loading="lazy" /></div>
-              <div className="card-body"><h3>Khiva</h3><p>A walled museum city with sandy lanes, towers, and sunset terraces.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=khiva">Explore</a></div></div>
+              <div className="card-body"><h3>Khiva</h3><p>A walled museum city with sandy lanes, towers, and sunset terraces.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=khiva">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="/images/cities/nukus.jpg" alt="Nukus city ensemble and the Savitsky Museum" loading="lazy" /></div>
-              <div className="card-body"><h3>Nukus</h3><p>Gateway to avant-garde art, desert landscapes, and the Aral Sea story.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=nukus">Explore</a></div></div>
+              <div className="card-body"><h3>Nukus</h3><p>Gateway to avant-garde art, desert landscapes, and the Aral Sea story.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=nukus">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg?width=1000" alt="Devonaboy Jome Mosque in Andijan" loading="lazy" /></div>
-              <div className="card-body"><h3>Andijan</h3><p>A Fergana Valley city known for orchards, bazaars, and regional culture.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=andijan">Explore</a></div></div>
+              <div className="card-body"><h3>Andijan</h3><p>A Fergana Valley city known for orchards, bazaars, and regional culture.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=andijan">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="/images/cities/namangan.jpg" alt="Historic architecture and gardens of Namangan" loading="lazy" /></div>
-              <div className="card-body"><h3>Namangan</h3><p>Garden avenues, spiritual sites, and mountain escapes nearby.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=namangan">Explore</a></div></div>
+              <div className="card-body"><h3>Namangan</h3><p>Garden avenues, spiritual sites, and mountain escapes nearby.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=namangan">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="/images/cities/fergana.jpg" alt="A green city boulevard in Fergana" loading="lazy" /></div>
-              <div className="card-body"><h3>Fergana</h3><p>Elegant streets, artisan workshops, silk heritage, and valley hospitality.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=fergana">Explore</a></div></div>
+              <div className="card-body"><h3>Fergana</h3><p>Elegant streets, artisan workshops, silk heritage, and valley hospitality.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=fergana">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="/images/cities/jizzakh.jpg" alt="Mountain road near Jizzakh and Zaamin" loading="lazy" /></div>
-              <div className="card-body"><h3>Jizzakh</h3><p>Mountain air, national parks, quiet towns, and memorable local cuisine.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=jizzakh">Explore</a></div></div>
+              <div className="card-body"><h3>Jizzakh</h3><p>Mountain air, national parks, quiet towns, and memorable local cuisine.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=jizzakh">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20north-east.jpg?width=1000" alt="Kok-Gumbaz Mosque in Qarshi" loading="lazy" /></div>
-              <div className="card-body"><h3>Qarshi</h3><p>Southern heritage, bridges, madrasahs, and relaxed neighborhood cafes.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=qarshi">Explore</a></div></div>
+              <div className="card-body"><h3>Qarshi</h3><p>Southern heritage, bridges, madrasahs, and relaxed neighborhood cafes.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=qarshi">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Termez%20Sultan-Saodat.jpg?width=1000" alt="Sultan Saodat ensemble in Termez" loading="lazy" /></div>
-              <div className="card-body"><h3>Termez</h3><p>Ancient Buddhist sites, riverside history, and sunlit archaeological routes.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=termez">Explore</a></div></div>
+              <div className="card-body"><h3>Termez</h3><p>Ancient Buddhist sites, riverside history, and sunlit archaeological routes.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=termez">Explore</a></div></div>
             </article>
             <article className="card city-card">
               <div className="image"><img src="/images/cities/gulistan.jpg" alt="Gulistan central square and fountains" loading="lazy" /></div>
-              <div className="card-body"><h3>Gulistan</h3><p>A calm stop with green spaces, regional flavors, and easy onward travel.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="city.html?city=gulistan">Explore</a></div></div>
+              <div className="card-body"><h3>Gulistan</h3><p>A calm stop with green spaces, regional flavors, and easy onward travel.</p><div className="meta"><span className="rating">City guide</span><a className="mini-btn" href="/city?city=gulistan">Explore</a></div></div>
             </article>
           </div>
         </section>
@@ -104,7 +104,7 @@ export default function HomeEn() {
           </div>
           <div className="grid restaurant-grid">
             <article className="card media-card"><div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan%20square%20Samarkand.jpg?width=1000" alt="Registan Square in Samarkand" loading="lazy" /></div><div className="card-body"><span className="place-city">Samarkand</span><h3>Registan</h3><p>A monumental ensemble of madrasahs and one of Uzbekistan’s defining landmarks.</p></div></article>
-            <article className="card media-card"><div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Poi Kalyan complex in Bukhara" loading="lazy" /></div><div className="card-body"><span className="place-city">Bukhara</span><h3>Poi Kalyan</h3><p>A historic ensemble centred on the Kalyan Minaret, mosque and Mir-i-Arab Madrasah.</p><a className="mini-btn" href="bukhara.html">Open city guide</a></div></article>
+            <article className="card media-card"><div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000" alt="Poi Kalyan complex in Bukhara" loading="lazy" /></div><div className="card-body"><span className="place-city">Bukhara</span><h3>Poi Kalyan</h3><p>A historic ensemble centred on the Kalyan Minaret, mosque and Mir-i-Arab Madrasah.</p><a className="mini-btn" href="/bukhara">Open city guide</a></div></article>
             <article className="card media-card"><div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000" alt="Itchan Kala old city in Khiva" loading="lazy" /></div><div className="card-body"><span className="place-city">Khiva</span><h3>Itchan Kala</h3><p>A walled old city of minarets, palaces and working craft courtyards.</p></div></article>
           </div>
         </section>
@@ -113,7 +113,7 @@ export default function HomeEn() {
           <div className="grid hotel-grid">
             <article className="card media-card"><div className="homepage-hotel-placeholder homepage-hotel-visual--tashkent" role="img" aria-label="Premium architectural visual for Hyatt Regency Tashkent"><span>Tashkent</span></div><div className="card-body"><h3>Hyatt Regency Tashkent</h3><div className="details"><span>Tashkent</span><span>Price depends on date — check the official website</span></div><a className="mini-btn" href="https://www.hyatt.com/hyatt-regency/en-US/tasrt-hyatt-regency-tashkent" target="_blank" rel="noopener noreferrer">Official site</a></div></article>
             <article className="card media-card"><div className="homepage-hotel-placeholder homepage-hotel-visual--samarkand" role="img" aria-label="Premium Timurid-inspired visual for Samarkand Regency Amir Temur"><span>Samarkand</span></div><div className="card-body"><h3>Samarkand Regency Amir Temur</h3><div className="details"><span>Samarkand</span><span>Price depends on date — check the official website</span></div><a className="mini-btn" href="https://www.silkroad-samarkand.com/hotels/samarkand-regency-amir-temur/" target="_blank" rel="noopener noreferrer">Official site</a></div></article>
-            <article className="card media-card"><div className="homepage-hotel-placeholder homepage-hotel-visual--bukhara" role="img" aria-label="Premium Old Bukhara architectural visual for Mercure Bukhara Old Town"><span>Bukhara</span></div><div className="card-body"><h3>Mercure Bukhara Old Town</h3><div className="details"><span>Bukhara</span><span>Price depends on date — check the official website</span></div><a className="mini-btn" href="bukhara.html#hotels">Bukhara guide</a></div></article>
+            <article className="card media-card"><div className="homepage-hotel-placeholder homepage-hotel-visual--bukhara" role="img" aria-label="Premium Old Bukhara architectural visual for Mercure Bukhara Old Town"><span>Bukhara</span></div><div className="card-body"><h3>Mercure Bukhara Old Town</h3><div className="details"><span>Bukhara</span><span>Price depends on date — check the official website</span></div><a className="mini-btn" href="/bukhara#hotels">Bukhara guide</a></div></article>
           </div>
         </section>
         <section className="section">

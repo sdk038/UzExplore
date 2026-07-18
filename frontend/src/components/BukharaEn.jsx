@@ -5,9 +5,9 @@ export default function BukharaEn() {
         <div>
             <header className="navbar">
                 <div className="nav-inner">
-                    <a className="logo" href="index.html">Uz<span>Explore</span></a>
+                    <a className="logo" href="/">Uz<span>Explore</span></a>
                     <nav className="nav-links" aria-label="Primary navigation">
-                        <a href="index.html#home">Home</a><a href="index.html#cities">Cities</a><a
+                        <a href="/#home">Home</a><a href="/#cities">Cities</a><a
                         href="#attractions">Attractions</a><a href="#restaurants">Restaurants</a><a
                         href="#hotels">Hotels</a><a href="#contacts">Contact</a>
                     </nav>
@@ -15,9 +15,9 @@ export default function BukharaEn() {
                         <button className="bukhara-theme-toggle" type="button" aria-label="Toggle theme"
                                 title="Toggle theme"><span aria-hidden="true">◐</span></button>
                         <div className="language-switch" aria-label="Language selector"><a className="active"
-                                                                                           href="bukhara.html"
+                                                                                           href="/bukhara"
                                                                                            aria-label="English">EN</a><a
-                            href="bukhara-ru.html" aria-label="Russian">RU</a></div>
+                            href="/ru/bukhara" aria-label="Russian">RU</a></div>
                         <a className="btn btn-primary" href="#categories">Explore Bukhara</a>
                     </div>
                 </div>
@@ -2212,7 +2212,7 @@ export default function BukharaEn() {
                             href="#hotels">Hotels</a></div>
                         <div><h4>Plan</h4><a href="#transport">Transport</a><a href="#contacts">Contacts</a><a
                             href="#top">Back to top</a></div>
-                        <div><h4>Language</h4><a href="bukhara.html">English</a><a href="bukhara-ru.html">Russian</a>
+                        <div><h4>Language</h4><a href="/bukhara">English</a><a href="/ru/bukhara">Russian</a>
                         </div>
                     </div>
                     <p className="copyright">© 2026 UzExplore</p></div>
