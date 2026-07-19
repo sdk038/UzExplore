@@ -1,0 +1,1273 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Golos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-bg: #E9E2D4;
+    --color-surface: #FEFBF8;
+    --color-deep: #162938;
+    --color-registan: #2E9DA4;
+    --color-shahi: #1C4B7C;
+    --color-sandstone: #C8A16A;
+    --color-madrasa: #D4A135;
+    --color-taupe: #A78B71;
+    --color-muted: #5B6270;
+    --color-border: rgba(200, 161, 106, 0.25);
+    color-scheme: light;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-deep);
+    font-family: 'Golos Text', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    antialiased: auto;
+}
+
+html[data-theme='dark'], body[data-theme='dark'] {
+    background-color: #101826;
+    color: #E2E8F0;
+}
+
+html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .section-alt,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .guide-filters,
+html[data-theme='dark'] .app-modal__panel,
+html[data-theme='dark'] .destination-section--tint,
+html[data-theme='dark'] .bukhara-section--tint,
+body[data-theme='dark'] .navbar,
+body[data-theme='dark'] .section-alt,
+body[data-theme='dark'] .card,
+body[data-theme='dark'] .guide-filters,
+body[data-theme='dark'] .app-modal__panel,
+body[data-theme='dark'] .destination-section--tint,
+body[data-theme='dark'] .bukhara-section--tint {
+    background-color: rgba(15, 23, 42, 0.92);
+    color: #E2E8F0;
+}
+
+html[data-theme='dark'] .nav-links a,
+html[data-theme='dark'] .language-switch a,
+html[data-theme='dark'] .logo,
+html[data-theme='dark'] .section-kicker,
+html[data-theme='dark'] .place-city,
+html[data-theme='dark'] .destination-back,
+body[data-theme='dark'] .nav-links a,
+body[data-theme='dark'] .language-switch a,
+body[data-theme='dark'] .logo,
+body[data-theme='dark'] .section-kicker,
+body[data-theme='dark'] .place-city,
+body[data-theme='dark'] .destination-back {
+    color: #CBD5E1;
+}
+
+html[data-theme='dark'] .border-b,
+html[data-theme='dark'] .border-slate-200\/80,
+body[data-theme='dark'] .border-b,
+body[data-theme='dark'] .border-slate-200\/80 {
+    border-color: #1E293B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
+
+}
+
+code, kbd, samp, pre, .monospace {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
+html[data-theme='dark'], body[data-theme='dark'] {
+    @apply bg-slate-950 text-slate-100;
+}
+
+html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .section-alt,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .guide-filters,
+html[data-theme='dark'] .app-modal__panel,
+html[data-theme='dark'] .destination-section--tint,
+html[data-theme='dark'] .bukhara-section--tint,
+body[data-theme='dark'] .navbar,
+body[data-theme='dark'] .section-alt,
+body[data-theme='dark'] .card,
+body[data-theme='dark'] .guide-filters,
+body[data-theme='dark'] .app-modal__panel,
+body[data-theme='dark'] .destination-section--tint,
+body[data-theme='dark'] .bukhara-section--tint {
+    @apply bg-slate-900/90 text-slate-100;
+}
+
+html[data-theme='dark'] .nav-links a,
+html[data-theme='dark'] .language-switch a,
+html[data-theme='dark'] .logo,
+html[data-theme='dark'] .section-kicker,
+html[data-theme='dark'] .place-city,
+html[data-theme='dark'] .destination-back,
+body[data-theme='dark'] .nav-links a,
+body[data-theme='dark'] .language-switch a,
+body[data-theme='dark'] .logo,
+body[data-theme='dark'] .section-kicker,
+body[data-theme='dark'] .place-city,
+body[data-theme='dark'] .destination-back {
+    @apply text-slate-200;
+}
+
+html[data-theme='dark'] .border-b,
+html[data-theme='dark'] .border-slate-200\/80,
+body[data-theme='dark'] .border-b,
+body[data-theme='dark'] .border-slate-200\/80 {
+    @apply border-slate-800;
+}
+
+html[data-theme='dark'] .bg-stone-50 {
+    background-color: #0f172a !important;
+}
+
+html[data-theme='dark'] .text-slate-900 {
+    color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .bg-white\/80,
+html[data-theme='dark'] .bg-white {
+    background-color: rgba(15, 23, 42, 0.92) !important;
+}
+
+html[data-theme='dark'] .bg-slate-100 {
+    background-color: #111827 !important;
+}
+
+html[data-theme='dark'] .text-slate-600,
+html[data-theme='dark'] .text-slate-700,
+html[data-theme='dark'] .text-slate-500,
+html[data-theme='dark'] .text-slate-800 {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .border-slate-200\/80 {
+    border-color: rgba(148, 163, 184, 0.24) !important;
+}
+
+@layer components {
+    .navbar {
+        @apply sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl;
+    }
+
+    .nav-inner {
+        @apply mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8;
+    }
+
+    .logo {
+        @apply text-lg font-semibold uppercase tracking-[0.3em];
+        color: var(--color-deep);
+    }
+
+    .logo span {
+        color: var(--color-madrasa);
+    }
+
+    .nav-links {
+        @apply hidden items-center gap-8 text-sm font-medium md:flex;
+        color: var(--color-muted);
+    }
+
+    .nav-links a {
+        @apply px-2 py-1;
+    }
+
+    .nav-links a,
+    .language-switch a,
+    .destination-back {
+        @apply transition-colors duration-200 hover:text-amber-600;
+    }
+
+    .nav-actions {
+        @apply flex items-center gap-4;
+        height: 40px; /* единая опорная высота для всего ряда кнопок */
+    }
+
+    .theme-toggle,
+    .account-button,
+    .language-switch a,
+    .app-modal__close,
+    .gallery-prev,
+    .gallery-next,
+    .btn,
+    .app-text-button,
+    .mini-btn {
+        @apply rounded-full border px-4 py-2 text-sm font-medium shadow-sm transition inline-flex items-center justify-center whitespace-nowrap;
+        border-color: var(--color-border);
+        background-color: rgba(255, 251, 248, 0.92);
+        color: var(--color-deep);
+        height: 40px;
+        min-width: 44px;
+        flex-shrink: 0;
+    }
+
+
+    .theme-toggle:hover,
+    .account-button:hover,
+    .language-switch a:hover,
+    .app-modal__close:hover,
+    .gallery-prev:hover,
+    .gallery-next:hover {
+        border-color: var(--color-madrasa);
+        color: var(--color-madrasa);
+    }
+
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .theme-toggle span {
+        font-size: 16px;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .language-switch {
+        @apply inline-flex items-center rounded-full shadow-sm;
+        background-color: rgba(233, 226, 212, 0.6); /* мягкий фон в тон --color-bg, а не белая капсула отдельно */
+        border: 1px solid var(--color-border);
+        padding: 3px;
+        gap: 2px;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    .language-switch a {
+        background-color: transparent !important;
+    }
+
+
+    .language-switch a:hover {
+        color: var(--color-deep);
+    }
+
+
+    .language-switch a.active {
+        background-color: var(--color-madrasa) !important;
+        color: var(--color-deep);
+        box-shadow: 0 2px 8px rgba(212, 161, 53, 0.35);
+    }
+
+    .language-switch a.active:hover {
+        color: var(--color-deep);
+    }
+
+    .btn,
+    .mini-btn,
+    .account-button,
+    .app-text-button {
+        @apply inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition duration-200;
+    }
+
+    /* Unified form controls */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input,
+    textarea,
+    select,
+    .app-form input,
+    .app-form select,
+    .app-form textarea {
+        @apply rounded-2xl border border-slate-300 bg-white/90 px-4 py-2 text-sm text-slate-700 outline-none transition duration-150;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        @apply py-3 h-32;
+    }
+
+    select {
+        @apply pr-8 bg-[right_0.75rem_center] bg-no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus,
+    .app-form input:focus,
+    .app-form select:focus,
+    .app-form textarea:focus {
+        @apply ring-2 ring-amber-300 border-amber-400;
+        outline: none;
+    }
+
+    /* Ensure all primary buttons share same sizing */
+    .btn,
+    .btn-primary,
+    .mini-btn,
+    .account-button,
+    .language-switch a,
+    .app-text-button {
+        height: 40px;
+        min-width: 44px;
+        border-radius: 9999px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .btn-primary {
+        @apply text-white bg-[color:var(--color-deep)];
+    }
+
+    .mini-btn {
+        @apply px-3 py-1 rounded-full text-sm;
+        height: 36px;
+        min-width: auto;
+    }
+
+    /* Guide quick search tweaks */
+    .guide-quick-search {
+        padding: 8px;
+    }
+
+    .guide-quick-search form {
+        @apply w-full items-center;
+    }
+
+    .guide-quick-search__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 16px;
+        align-items: center; /* было align-items: end — из-за этого кнопка "плавала" на другой высоте, чем поля с подписями */
+        padding: 16px;
+    }
+
+
+    .guide-quick-search__field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-muted);
+    }
+
+    .guide-quick-search__field select {
+        height: 44px;
+        padding: 0 14px;
+        border-radius: 14px;
+        border: 1px solid var(--color-border);
+        background-color: var(--color-surface);
+        color: var(--color-deep);
+        font-size: 0.92rem;
+        font-weight: 500;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .guide-quick-search__field select:focus {
+        border-color: var(--color-madrasa);
+        box-shadow: 0 0 0 3px rgba(212, 161, 53, 0.25);
+    }
+    .guide-quick-search__submit {
+        align-self: end;
+        margin-bottom: 0; /* без дополнительного смещения */
+    }
+
+    .guide-quick-search__submit:hover {
+        background-color: #b68226 !important;
+    }
+
+    @media (max-width: 720px) {
+        .guide-quick-search__form {
+            grid-template-columns: 1fr;
+        }
+
+        .guide-quick-search__submit {
+            width: 100%;
+        }
+    }
+    .guide-results {
+        @apply mt-4 text-sm text-slate-300;
+    }
+
+    .guide-empty {
+        @apply mt-4 text-sm text-slate-400;
+    }
+
+    .btn-primary,
+    .account-button {
+        @apply text-white;
+        background-color: var(--color-deep);
+    }
+
+    .btn-primary:hover,
+    .account-button:hover {
+        background-color: var(--color-shahi);
+    }
+
+    .btn-light {
+        @apply text-[color:var(--color-deep)];
+        background-color: rgba(255, 255, 255, 0.92);
+        border-color: rgba(200, 161, 106, 0.25);
+    }
+
+    .mini-btn {
+        @apply w-fit text-[color:var(--color-deep)];
+        background-color: var(--color-madrasa);
+    }
+
+    .mini-btn:hover {
+        background-color: #b68226;
+    }
+
+    .section {
+        @apply mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+        position: relative;
+    }
+
+    .section-alt {
+        @apply rounded-[2rem] px-4 py-16 sm:px-6 lg:px-8;
+        background-color: rgba(254, 251, 248, 0.94);
+        border: 1px solid rgba(200, 161, 106, 0.18);
+    }
+
+    .section-head {
+        @apply mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between;
+        position: relative;
+        padding-bottom: 0.75rem;
+    }
+
+    .section-head::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 5rem;
+        height: 2px;
+        background: linear-gradient(90deg, var(--color-madrasa), transparent);
+    }
+
+    .section-head::after {
+        /* decorative square removed */
+        content: none;
+    }
+
+    .section-head h2 {
+        @apply text-3xl font-semibold tracking-tight text-slate-900;
+    }
+
+    .section-head p {
+        @apply max-w-2xl text-base leading-7 text-slate-600;
+    }
+
+    .section-kicker {
+        @apply mb-3 block text-sm font-semibold uppercase tracking-[0.3em];
+        color: var(--color-sandstone);
+        font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .cities-grid,
+    .attractions-grid,
+    .restaurant-grid,
+    .hotel-grid,
+    .guides-grid,
+    .destination-grid,
+    .service-grid {
+        @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .features {
+        @apply grid gap-6 md:grid-cols-2 xl:grid-cols-4;
+    }
+
+    .card,
+    .guide-filters,
+    .destination-card,
+    .service-card,
+    .mobility-panel,
+    .app-modal__panel,
+    .bukhara-place-card,
+    .bukhara-info-card {
+        @apply overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)];
+    }
+
+    .city-card,
+    .feature-card,
+    .attraction-card,
+    .media-card,
+    .guide-card,
+    .destination-card,
+    .service-card {
+        @apply flex h-full flex-col;
+    }
+
+    .image,
+    .guide-card__image,
+    .destination-card__photo,
+    .service-card__photo {
+        @apply overflow-hidden;
+    }
+
+    .image img,
+    .guide-card__image img,
+    .service-card__photo {
+        @apply h-56 w-full object-cover;
+    }
+
+    .card-body,
+    .destination-card__body,
+    .service-card {
+        @apply flex flex-1 flex-col gap-4 p-6;
+    }
+
+    .card h3,
+    .guide-card h3,
+    .destination-card__body h3,
+    .service-card h3 {
+        @apply text-xl font-semibold text-slate-900;
+    }
+
+    .card p,
+    .guide-card p,
+    .destination-card__body p,
+    .service-card p,
+    .mobility-panel p,
+    .app-modal__panel p {
+        @apply text-sm leading-7 text-slate-600;
+    }
+
+    /* Consistent sizing for cards, images and headings */
+    .card {
+        min-height: 16rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image img,
+    .guide-card__image img,
+    .service-card__photo,
+    .attraction-card img,
+    .media-card .image img {
+        min-height: 14rem;
+        object-fit: cover;
+    }
+
+    .card h3,
+    .guide-card h3,
+    .destination-card__body h3,
+    .service-card h3 {
+        min-height: 2.25rem;
+    }
+
+    .card-body,
+    .destination-card__body,
+    .service-card {
+        @apply flex flex-1 flex-col gap-4 p-6;
+        justify-content: space-between;
+    }
+
+    .section-head h2 {
+        @apply text-3xl font-semibold tracking-tight text-slate-900;
+        line-height: 1.15;
+        min-height: 3.25rem;
+    }
+
+    .meta,
+    .guide-card__footer,
+    .destination-facts,
+    .details {
+        @apply mt-auto flex flex-wrap items-center gap-3 text-sm text-slate-600;
+    }
+
+    .rating,
+    .place-city,
+    .location,
+    .guide-card__topline span,
+    .guide-card__coming-soon {
+        @apply rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600;
+    }
+
+    .feature-card .icon {
+        @apply mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-2xl;
+    }
+
+    .attraction-card img {
+        @apply h-60 w-full object-cover;
+    }
+
+    .media-card .image img {
+        @apply h-48;
+    }
+
+    .hero-actions {
+        @apply mt-8 flex flex-wrap gap-4;
+    }
+
+    .uz-home-hero,
+    .editorial-hero {
+        @apply relative overflow-hidden;
+        background-color: var(--color-shahi);
+    }
+
+    .editorial-hero__background {
+        @apply absolute inset-0;
+        background: radial-gradient(circle at top left, rgba(46, 157, 164, 0.35), transparent 40%), linear-gradient(180deg, rgba(22, 41, 56, 0.88), rgba(28, 75, 124, 0.78));
+    }
+
+    .editorial-hero__background img {
+        @apply h-full w-full object-cover opacity-30;
+    }
+
+    .editorial-hero__shell {
+        @apply relative mx-auto flex min-h-[560px] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8;
+    }
+
+    .hero-content {
+        @apply relative max-w-2xl rounded-[2rem] border p-8 text-white shadow-2xl backdrop-blur;
+        background-color: rgba(6, 24, 42, 0.78);
+        border-color: rgba(212, 161, 53, 0.16);
+    }
+
+    .hero-content::before {
+        content: '';
+        position: absolute;
+        right: -3.5rem;
+        top: 1rem;
+        width: 8rem;
+        height: 8rem;
+        background: radial-gradient(circle at 30% 30%, rgba(212, 161, 53, 0.35), transparent 55%);
+        filter: blur(12px);
+    }
+
+    .eyebrow {
+        @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium uppercase tracking-[0.3em] text-slate-100;
+    }
+
+    .hero-content h1 {
+        @apply mt-6 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl;
+        letter-spacing: 0.02em;
+    }
+
+    .hero-content p {
+        @apply mt-4 max-w-xl text-lg leading-8;
+        color: rgba(226, 229, 235, 0.88);
+    }
+
+    .editorial-hero__link {
+        @apply inline-flex items-center gap-2 text-sm font-semibold text-amber-300 transition hover:text-white;
+    }
+
+    .editorial-proof {
+        @apply mt-8 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/10 p-4;
+    }
+
+    .editorial-proof__avatars {
+        @apply flex -space-x-2;
+    }
+
+    .editorial-proof__avatars span {
+        @apply flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 text-sm font-semibold text-white;
+    }
+
+    .editorial-proof strong {
+        @apply text-lg text-white;
+    }
+
+    .guides-hero {
+        @apply mx-auto flex min-h-[360px] max-w-7xl items-end px-4 py-20 text-white sm:px-6 lg:px-8;
+        background: radial-gradient(circle at top left, rgba(251, 191, 36, 0.22), transparent 45%),
+        linear-gradient(120deg, rgba(15, 23, 42, 1), rgba(30, 41, 59, 0.9));
+    }
+
+    .guides-hero > div {
+        @apply max-w-3xl;
+    }
+
+    .guides-hero h1 {
+        @apply mt-4 text-4xl font-semibold sm:text-5xl;
+    }
+
+    .guides-hero p {
+        @apply mt-4 max-w-2xl text-lg text-slate-200;
+    }
+
+    .guide-filters {
+        @apply mb-8 grid gap-4 rounded-[1.5rem] border border-slate-200/80 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)] lg:grid-cols-5;
+    }
+
+    .guide-filters label {
+        @apply flex flex-col gap-2 text-sm font-medium text-slate-700;
+    }
+
+    .guide-filters select,
+    .guide-filters input,
+    .app-form input,
+    .app-form textarea {
+        @apply rounded-2xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 outline-none ring-0 transition focus:border-amber-500;
+    }
+
+    .guide-results {
+        @apply mb-6 text-sm font-medium text-slate-600;
+    }
+
+    .guide-card__topline {
+        @apply mb-4 flex items-center justify-between gap-2 text-sm text-slate-500;
+    }
+
+    .guide-card__tags {
+        @apply mt-4 flex flex-wrap gap-2;
+    }
+
+    .guide-card__tags span {
+        @apply rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700;
+    }
+
+    .guide-card__specialties {
+        @apply mt-4 text-sm text-slate-600;
+    }
+
+    .guide-card__footer {
+        @apply mt-6 justify-between border-t border-slate-200 pt-4;
+    }
+
+    .guide-empty {
+        @apply rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center text-sm text-slate-600;
+    }
+
+    .destination-hero {
+        @apply min-h-[420px] bg-cover bg-center px-4 py-24 text-white sm:px-6 lg:px-8;
+    }
+
+    .destination-hero > div {
+        @apply mx-auto flex max-w-7xl flex-col gap-5;
+    }
+
+    .destination-back {
+        @apply w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur;
+    }
+
+    .destination-hero span,
+    .destination-hero p {
+        @apply max-w-2xl text-lg text-slate-200;
+    }
+
+    .destination-hero h1 {
+        @apply text-4xl font-semibold sm:text-5xl;
+    }
+
+    .destination-facts span {
+        @apply rounded-full bg-white/10 px-3 py-2 text-sm;
+    }
+
+    .destination-section {
+        @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8;
+    }
+
+    .destination-intro {
+        @apply grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end;
+    }
+
+    .destination-section--tint {
+        @apply rounded-[2rem] bg-slate-100/80;
+    }
+
+    .destination-heading {
+        @apply mb-8 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between;
+    }
+
+    .destination-heading h2 {
+        @apply text-3xl font-semibold text-slate-900;
+    }
+
+    .destination-heading p {
+        @apply max-w-xl text-base text-slate-600;
+    }
+
+    .destination-card__photo {
+        @apply flex min-h-[220px] flex-col justify-between bg-cover bg-center p-6 text-white;
+    }
+
+    .destination-card__photo span {
+        @apply text-sm font-semibold uppercase tracking-[0.3em] text-white/80;
+    }
+
+    .destination-card__photo b {
+        @apply text-xl font-semibold;
+    }
+
+    .practical-grid {
+        @apply grid gap-6 md:grid-cols-3;
+    }
+
+    .practical-grid article,
+    .mobility-panel {
+        @apply rounded-[1.5rem] border border-slate-200/80 bg-white p-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)];
+    }
+
+    .practical-grid h3,
+    .mobility-panel h2 {
+        @apply mt-4 text-2xl font-semibold text-slate-900;
+    }
+
+    .mobility-panel {
+        @apply flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between;
+    }
+
+    .day-plan {
+        @apply list-decimal space-y-3 rounded-[1.5rem] border border-slate-200/80 bg-white p-8 text-slate-700 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)];
+    }
+
+    .footer {
+        @apply border-t border-slate-200/80 bg-white/80;
+    }
+
+    .footer-inner {
+        @apply mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 text-sm text-slate-600 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8;
+    }
+
+    .copyright {
+        @apply text-slate-500;
+    }
+
+    .app-modal {
+        @apply fixed inset-0 z-[60] flex items-center justify-center px-4 py-6;
+    }
+
+    .app-modal__backdrop {
+        @apply absolute inset-0 bg-slate-950/70;
+    }
+
+    .app-modal__panel {
+        @apply relative z-10 w-full max-w-xl p-8;
+    }
+
+    .app-modal__close {
+        @apply absolute right-4 top-4;
+    }
+
+    .app-form {
+        @apply mt-6 flex flex-col gap-4;
+    }
+
+    .app-form label {
+        @apply flex flex-col gap-2 text-sm font-medium text-slate-700;
+    }
+
+    .app-check {
+        @apply flex items-start gap-2 text-sm text-slate-600;
+    }
+
+    .app-check input {
+        @apply mt-1;
+    }
+
+    .account-list {
+        @apply mt-6 space-y-3;
+    }
+
+    .account-booking {
+        @apply rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600;
+    }
+
+    .empty-state {
+        @apply rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 text-sm text-slate-600;
+    }
+
+    .app-text-button {
+        @apply mt-6 border border-slate-300 bg-white text-slate-700 hover:bg-slate-100;
+    }
+
+    .bukhara-hero,
+    .bukhara-section,
+    .bukhara-categories {
+        @apply mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8;
+    }
+
+    .bukhara-silk-hero {
+        @apply rounded-[2rem] bg-slate-900 px-6 py-12 text-white shadow-[0_24px_80px_-30px_rgba(15,23,42,0.8)];
+    }
+
+    .bukhara-hero__content {
+        @apply max-w-3xl;
+    }
+
+    .bukhara-hero__facts,
+    .bukhara-stats {
+        @apply mt-8 flex flex-wrap gap-3 text-sm text-slate-200;
+    }
+
+    .bukhara-hero__facts span,
+    .bukhara-stats span {
+        @apply rounded-full border border-white/10 bg-white/10 px-3 py-2;
+    }
+
+    .bukhara-about,
+    .bukhara-heading {
+        @apply flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between;
+    }
+
+    .bukhara-section--tint {
+        @apply rounded-[2rem] bg-amber-50/70;
+    }
+
+    .bukhara-card-grid {
+        @apply mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .bukhara-place-card,
+    .bukhara-info-card {
+        @apply flex flex-col overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white p-0 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)];
+    }
+
+    .bukhara-place-card img,
+    .bukhara-card-gallery {
+        @apply h-56 w-full object-cover;
+    }
+
+    .bukhara-card-gallery {
+        @apply relative overflow-hidden bg-slate-100;
+    }
+
+    .bukhara-gallery__track {
+        @apply flex h-full w-full;
+    }
+
+    .bukhara-gallery__slide {
+        @apply flex min-w-full flex-col items-start justify-end bg-slate-200 p-6 text-slate-700;
+    }
+
+    .bukhara-map-links,
+    .bukhara-card-actions {
+        @apply mt-4 flex flex-wrap gap-3;
+    }
+
+    .bukhara-location,
+    .bukhara-status,
+    .bukhara-facts-list {
+        @apply text-sm text-slate-600;
+    }
+
+    .bukhara-facts-list {
+        @apply mt-4 list-disc space-y-2 pl-5;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-transparent px-4 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:border-amber-500 hover:text-amber-600;
+    }
+
+    .guide-filters__reset {
+        @apply mt-2 self-end rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-200;
+    }
+
+    .destination-language {
+        @apply rounded-full border border-slate-300 bg-white/90 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm;
+    }
+
+    .destination-loading {
+        @apply mx-auto my-20 max-w-3xl rounded-[2rem] border border-slate-200/80 bg-white p-12 text-center text-lg text-slate-700 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)];
+    }
+
+    .destination-grid {
+        @apply mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .footer-grid {
+        @apply grid gap-10 md:grid-cols-4;
+    }
+
+    .footer-grid h3,
+    .footer-grid h4 {
+        @apply mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-900;
+    }
+
+    .footer-grid a {
+        @apply block text-sm text-slate-600 transition hover:text-amber-600;
+    }
+
+    .socials {
+        @apply mt-4 flex flex-wrap gap-3;
+    }
+
+    .socials a {
+        @apply inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-amber-500 hover:text-amber-600;
+    }
+
+    .gallery {
+        @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+    }
+
+    .gallery img {
+        @apply h-72 w-full rounded-[1.5rem] object-cover;
+    }
+
+    .tips-wrap {
+        @apply grid gap-10 lg:grid-cols-[1.4fr_1fr];
+    }
+
+    .tips-list {
+        @apply grid gap-4;
+    }
+
+    .tip {
+        @apply rounded-[1.5rem] border border-slate-200/80 bg-white p-6 text-slate-700 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.3)];
+    }
+
+    .tips-copy h2 {
+        @apply text-3xl font-semibold text-slate-900;
+    }
+
+    .tips-copy p {
+        @apply max-w-xl text-slate-600;
+    }
+
+    .homepage-hotel-placeholder {
+        @apply relative flex min-h-[240px] items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-amber-100 via-slate-100 to-slate-200 text-center text-lg font-semibold text-slate-700;
+    }
+
+    .homepage-hotel-placeholder span {
+        @apply text-xl font-semibold;
+    }
+
+    .homepage-hotel-visual--bukhara {
+        @apply bg-cover bg-center;
+        background-image: linear-gradient(135deg, rgba(244, 173, 99, 0.24), rgba(15, 23, 42, 0.12));
+    }
+
+    .homepage-hotel-visual--samarkand {
+        @apply bg-cover bg-center;
+        background-image: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.12));
+    }
+
+    .homepage-hotel-visual--tashkent {
+        @apply bg-cover bg-center;
+        background-image: linear-gradient(135deg, rgba(251, 191, 36, 0.16), rgba(15, 23, 42, 0.12));
+    }
+
+    .bukhara-theme-toggle {
+        @apply rounded-full border border-slate-300 bg-white/80 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:border-amber-500 hover:text-amber-600;
+    }
+
+    .bukhara-categories {
+        @apply mt-10 flex flex-wrap gap-3 rounded-[1.5rem] border border-slate-200/80 bg-white/90 px-6 py-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.2)];
+    }
+
+    .bukhara-categories a {
+        @apply inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-amber-400 hover:bg-amber-50 hover:text-amber-600;
+    }
+
+    .bukhara-silk-hero__art {
+        @apply pointer-events-none absolute inset-0 overflow-hidden;
+    }
+
+    .bukhara-ornament {
+        @apply absolute rounded-full bg-amber-400/20 blur-3xl;
+    }
+
+    .bukhara-ornament--one {
+        @apply left-6 top-6 h-28 w-28;
+    }
+
+    .bukhara-ornament--two {
+        @apply right-10 top-12 h-40 w-40;
+    }
+
+    .bukhara-particles {
+        @apply absolute inset-0 pointer-events-none;
+    }
+
+    .bukhara-particles i {
+        @apply absolute inline-block h-2.5 w-2.5 rounded-full bg-amber-200/80;
+        opacity: 0.85;
+        top: calc(10% + var(--i) * 3%);
+        left: calc(5% + var(--i) * 4%);
+    }
+
+    .bukhara-route {
+        @apply absolute inset-0 h-full w-full opacity-80;
+    }
+
+    .bukhara-route__shadow {
+        fill: none;
+        stroke: rgba(247, 205, 110, 0.3);
+        stroke-width: 16;
+        filter: blur(14px);
+    }
+
+    .bukhara-route__line {
+        fill: none;
+        stroke: #fb923c;
+        stroke-width: 4;
+        stroke-linecap: round;
+    }
+
+    .bukhara-skyline {
+        @apply absolute bottom-0 left-1/2 flex w-full max-w-5xl -translate-x-1/2 justify-center gap-6;
+    }
+
+    .dome,
+    .arch,
+    .minaret {
+        @apply relative flex items-end justify-center rounded-full bg-white/10 text-slate-100;
+    }
+
+    .dome {
+        @apply h-20 w-20;
+    }
+
+    .dome--one {
+        @apply h-24 w-24;
+    }
+
+    .dome--two,
+    .dome--three {
+        @apply h-20 w-20;
+    }
+
+    .arch {
+        @apply h-16 w-12;
+    }
+
+    .arch--one {
+        @apply h-20 w-16;
+    }
+
+    .arch--two {
+        @apply h-20 w-16;
+    }
+
+    .minaret {
+        @apply h-24 w-12;
+    }
+
+    .bukhara-hero__content {
+        @apply relative z-10 max-w-3xl;
+    }
+
+    .bukhara-live-time {
+        @apply mt-6 flex flex-wrap gap-4 rounded-2xl border border-white/20 bg-white/10 p-4 text-sm text-slate-100;
+    }
+
+    .bukhara-hero__facts span,
+    .bukhara-stats article {
+        @apply rounded-full border border-white/10 bg-white/10 px-3 py-2 text-sm text-slate-200;
+    }
+
+    .bukhara-about {
+        @apply grid gap-10 lg:grid-cols-[1.5fr_1fr];
+    }
+
+    .bukhara-stats {
+        @apply grid gap-4;
+    }
+
+    .bukhara-stats article {
+        @apply rounded-[1.5rem] border border-slate-200/80 bg-white p-6 text-slate-700 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.15)];
+    }
+
+    .bukhara-card-grid,
+    .bukhara-contact-grid,
+    .bukhara-transport-grid,
+    .bukhara-local-photo-columns,
+    .bukhara-photo-grid {
+        @apply mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .bukhara-card-grid--attractions {
+        @apply xl:grid-cols-3;
+    }
+
+    .bukhara-card-grid--directory {
+        @apply lg:grid-cols-3 xl:grid-cols-4;
+    }
+
+    .bukhara-card-grid--rich {
+        @apply xl:grid-cols-4;
+    }
+
+    .bukhara-card-status {
+        @apply mb-4;
+    }
+
+    .bukhara-directory-placeholder {
+        @apply rounded-[1.5rem] border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-slate-600;
+    }
+
+    .bukhara-card-gallery,
+    .bukhara-card-gallery--single {
+        @apply relative overflow-hidden bg-slate-100;
+    }
+
+    .bukhara-card-gallery {
+        @apply h-56 w-full;
+    }
+
+    .bukhara-card-gallery--single {
+        @apply grid h-[420px] sm:grid-cols-2;
+    }
+
+    .bukhara-card-actions {
+        @apply mt-4 flex flex-wrap gap-3;
+    }
+
+    .bukhara-location,
+    .bukhara-status,
+    .bukhara-facts-list {
+        @apply text-sm text-slate-600;
+    }
+
+    .bukhara-contact-grid a,
+    .bukhara-map-links a {
+        @apply inline-flex rounded-full border border-slate-200/80 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-amber-50 hover:border-amber-300;
+    }
+
+    .bukhara-hero__heritage {
+        @apply block;
+    }
+
+    .bukhara-local-photo-section {
+        @apply grid gap-6;
+    }
+
+    .bukhara-local-photo-columns {
+        @apply grid gap-6 md:grid-cols-2;
+    }
+
+    .bukhara-local-photo-list {
+        @apply grid gap-6;
+    }
+
+    .bukhara-photo-grid {
+        @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .bukhara-photo-placeholder {
+        @apply rounded-[1.5rem] bg-slate-100 p-8 text-center text-slate-600;
+    }
+
+    .bukhara-pool-card,
+    .bukhara-rich-card,
+    .bukhara-directory-card {
+        @apply rounded-[1.5rem] border border-slate-200/80 bg-white p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.15)];
+    }
+
+    .bukhara-price-note,
+    .bukhara-status--photo,
+    .bukhara-visitor-note,
+    .bukhara-wudu {
+        @apply rounded-2xl bg-slate-100 p-4 text-sm text-slate-700;
+    }
+}

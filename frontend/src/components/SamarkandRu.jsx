@@ -3,7 +3,7 @@ import SiteHeader from './SiteHeader.jsx';
 
 export default function SamarkandRu() {
     return (
-        <div>
+        <div className="min-h-screen bg-stone-50 text-slate-900">
             <SiteHeader locale="ru"/>
             <main>
                 <section className="section" id="samarkand-intro">

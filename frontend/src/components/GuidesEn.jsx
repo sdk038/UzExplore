@@ -24,7 +24,12 @@ export default function GuidesEn() {
       kicker: 'Hire a guide', heading: 'Guides for your journey', description: 'Start with a guide who matches your route, language and travel style.',
       city: 'City', anyCity: 'Any city', language: 'Language', anyLanguage: 'Any language', specialty: 'Specialization', anySpecialty: 'Any specialty', maxPrice: 'Max. daily price', anyPrice: 'Any price', reset: 'Reset', found: 'guides found', specialties: 'Specialties:', profileSoon: 'Profile coming soon', empty: 'No guides match these filters yet. Try a broader search.'
     };
-  const [filters, setFilters] = useState(initialFilters);
+  const params = typeof location !== 'undefined' ? new URLSearchParams(location.search) : new URLSearchParams();
+  const [filters, setFilters] = useState(() => ({
+    ...initialFilters,
+    city: params.get('city') || initialFilters.city,
+    language: params.get('language') || initialFilters.language
+  }));
   const matchingGuides = useMemo(
     () => guides.filter(guide => guideMatchesFilters(guide, filters)),
     [filters]
@@ -36,9 +41,9 @@ export default function GuidesEn() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-stone-50 text-slate-900">
       <SiteHeader locale={locale} page="guides" />
-      <main>
+      <main className="bg-stone-50">
         <section className="guides-hero">
           <div>
             <span className="eyebrow">{text.eyebrow}</span>
@@ -60,7 +65,9 @@ export default function GuidesEn() {
             <label>{text.city}
               <select name="city" value={filters.city} onChange={updateFilter}>
                 <option value="">{text.anyCity}</option>
-                <option value="Samarkand">Samarkand</option>
+                {Array.from(new Set(guides.map(g => g.city))).map(city => (
+                  <option key={city} value={city}>{city}</option>
+                ))}
               </select>
             </label>
             <label>{text.language}

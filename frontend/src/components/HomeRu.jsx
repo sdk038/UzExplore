@@ -1,13 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SiteHeader from './SiteHeader.jsx';
 import HomeHero from './HomeHero.jsx';
+import { guides } from '../pages/guidesData.js';
 
 export default function HomeRu() {
     return (
-        <div>
+        <div className="min-h-screen bg-stone-50 text-slate-900">
             <SiteHeader locale="ru"/>
-            <main>
+            <main className="bg-stone-50">
                 <HomeHero locale="ru"/>
+
+                <section className="section" id="find-guide">
+                    <div className="section-head">
+                        <div>
+                            <span className="section-kicker">Найти гида</span>
+                            <h2>Ищете сопровождающего или частный тур?</h2>
+                        </div>
+                        <p>Быстрый поиск гидов по городу и языку. Нажмите «Найти», чтобы перейти к полному списку и профилям.</p>
+                    </div>
+
+                    <div className="card guide-quick-search">
+                        <form className="flex flex-wrap items-center gap-4 p-4 justify-between" onSubmit={event => {
+                            event.preventDefault();
+                            const form = new FormData(event.currentTarget);
+                            const params = new URLSearchParams();
+                            const city = form.get('city');
+                            const language = form.get('language');
+                            if (city) params.set('city', city);
+                            if (language) params.set('language', language);
+                            const query = params.toString();
+                            location.href = `/ru/guides${query ? `?${query}` : ''}`;
+                        }}>
+                            <label className="flex-1 min-w-[220px]">Город
+                                <select name="city" className="w-full mt-2 p-2 rounded-2xl border">
+                                    <option value="">Любой город</option>
+                                    <option value="Samarkand">Самarkand</option>
+                                    <option value="Bukhara">Bukhara</option>
+                                    <option value="Tashkent">Tashkent</option>
+                                </select>
+                            </label>
+                            <label className="flex-1 min-w-[220px]">Язык
+                                <select name="language" className="w-full mt-2 p-2 rounded-2xl border">
+                                    <option value="">Любой язык</option>
+                                    <option value="English">English</option>
+                                    <option value="Russian">Russian</option>
+                                    <option value="Uzbek">Uzbek</option>
+                                </select>
+                            </label>
+                            <div className="flex-none">
+                                <button className="btn-primary flex-none" type="submit">Найти</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
                 <section className="section" id="cities">
                     <div className="section-head">
                         <div>
@@ -175,14 +220,7 @@ export default function HomeRu() {
                                 <a className="mini-btn" href="/ru/city?city=samarkand">Подробнее</a>
                             </div>
                         </article>
-                        <article className="card attraction-card"><img
-                            src="https://images.unsplash.com/photo-1662468752704-f256cf5c6784?auto=format&fit=crop&q=85&w=1200"
-                            alt="Ark Fortress in Bukhara"/>
-                            <div className="card-body"><h3>Крепость Арк</h3><p>Монументальная цитадель, где жили
-                                правители Бухары, до сих пор доминирует над старым городом.</p>
-                                <div className="location">Бухара</div>
-                                <a className="mini-btn" href="#">Подробнее</a></div>
-                        </article>
+                                    {/* quick-search label removed (was inserted here by mistake) */}
                         <article className="card attraction-card"><img
                             src="https://images.unsplash.com/photo-1662468752704-f256cf5c6784?auto=format&fit=crop&q=85&w=1200"
                             alt="Lyabi-Hauz in Bukhara"/>
@@ -318,9 +356,6 @@ export default function HomeRu() {
                         <img
                             src="https://images.unsplash.com/photo-1549111998-cdc4a1d5367c?auto=format&fit=crop&q=80&w=700"
                             alt="Khiva minaret"/>
-                        <img
-                            src="https://images.unsplash.com/photo-1488459716781-31db52582f75?auto=format&fit=crop&q=80&w=700"
-                            alt="Uzbekistan market"/>
                         <img
                             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=700"
                             alt="Uzbekistan hotel"/>

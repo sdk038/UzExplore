@@ -14,13 +14,13 @@ export default function CityEn() {
   useEffect(() => { document.title = `${city.region} — Travel Guide | UzExplore`; }, [city]);
 
   return (
-    <div>
-      <header className="navbar"><div className="nav-inner">
+    <div className="min-h-screen bg-stone-50 text-slate-900">
+      <header className="navbar border-b border-slate-200/80 bg-white/80"><div className="nav-inner">
         <a className="logo" href="/">Uz<span>Explore</span></a>
         <nav className="nav-links" aria-label="Destination navigation"><a href="#places">Places</a><a href="#hotels">Hotels</a><a href="#mobility">Transport</a><a href="#plan">Itinerary</a></nav>
         <div className="nav-actions"><button className="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button><a className="language-switch destination-language" href={`/ru/city?city=${slug}`}>RU</a></div>
       </div></header>
-      <main id="destination-root">
+      <main id="destination-root" className="bg-stone-50">
         <section className="destination-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(3,21,39,.88),rgba(4,68,78,.48)),url('${city.photo}')`}}><div>
           <a className="destination-back" href="/#cities">← All destinations</a><span>{city.region}</span><h1>{city.name}</h1><p>{city.tagline}</p>
           <div className="destination-facts"><span><b>{city.days}</b> recommended</span><span><b>{city.season}</b> best season</span><span><b>{city.center}</b> destination center</span></div>

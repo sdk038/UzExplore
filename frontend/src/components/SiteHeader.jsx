@@ -76,7 +76,7 @@ export default function SiteHeader({ locale, page = 'home' }) {
               <a className={locale === 'en' ? 'active' : undefined} href={currentPathForLocale('en')} aria-label={text.english}>EN</a>
               <a className={locale === 'ru' ? 'active' : undefined} href={currentPathForLocale('ru')} aria-label={text.russian}>RU</a>
             </div>
-            <a className="btn btn-primary header-explore" href={page === 'home' ? '#cities' : `${locale === 'ru' ? '/ru' : ''}/#cities`}>{text.explore}</a>
+            <a className="btn btn-primary" href={page === 'home' ? '#cities' : `${locale === 'ru' ? '/ru' : ''}/#cities`}>{text.explore}</a>
             <button className="account-button" data-account type="button" onClick={openAccount}>{user ? text.trips : text.login}</button>
           </div>
         </div>
@@ -89,15 +89,15 @@ export default function SiteHeader({ locale, page = 'home' }) {
             <button className="app-modal__close" type="button" onClick={() => setModal(false)} aria-label={text.close}>×</button>
             {user ? (
               <>
-                <h2>{text.hello}, {user.name}</h2>
-                <p>{user.email} · {user.phone}</p>
+                <h2 className="text-2xl font-semibold text-slate-900">{text.hello}, {user.name}</h2>
+                <p className="mt-2">{user.email} · {user.phone}</p>
                 <div className="account-list">
                   {bookings.length ? bookings.map(booking => (
                     <article className="account-booking" key={booking.id}>
-                      <strong>{booking.title}</strong>
-                      <span>{booking.type} · {booking.date}</span>
-                      <small>{booking.destination}</small>
-                      <button type="button" onClick={() => cancelBooking(booking.id)}>{text.cancel}</button>
+                      <strong className="block text-slate-900">{booking.title}</strong>
+                      <span className="mt-1 block">{booking.type} · {booking.date}</span>
+                      <small className="mt-1 block">{booking.destination}</small>
+                      <button className="mt-3 rounded-full border border-slate-300 px-3 py-2 text-sm" type="button" onClick={() => cancelBooking(booking.id)}>{text.cancel}</button>
                     </article>
                   )) : <p className="empty-state">{text.empty}</p>}
                 </div>
@@ -105,8 +105,8 @@ export default function SiteHeader({ locale, page = 'home' }) {
               </>
             ) : (
               <>
-                <h2>{text.create}</h2>
-                <p>{text.intro}</p>
+                <h2 className="text-2xl font-semibold text-slate-900">{text.create}</h2>
+                <p className="mt-2">{text.intro}</p>
                 <form className="app-form" onSubmit={register}>
                   <label>{text.name}<input name="name" required minLength={2} autoComplete="name" /></label>
                   <label>{text.email}<input name="email" type="email" required autoComplete="email" /></label>

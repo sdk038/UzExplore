@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function BukharaEn() {
     return (
-        <div>
-            <header className="navbar">
+        <div className="min-h-screen bg-stone-50 text-slate-900">
+            <header className="navbar border-b border-slate-200/80 bg-white/80">
                 <div className="nav-inner">
                     <a className="logo" href="/">Uz<span>Explore</span></a>
                     <nav className="nav-links" aria-label="Primary navigation">

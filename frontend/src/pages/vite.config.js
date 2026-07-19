@@ -72,7 +72,7 @@ function documentShell(page, scriptSource, stylesheet = '') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">${meta}
     <title>${page.title}</title>${stylesheet ? `\n    <link rel="stylesheet" href="${stylesheet}">` : ''}
-    <script>try{document.documentElement.dataset.theme=localStorage.getItem("uzexplore-theme")||"light"}catch(e){}</script>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("uzexplore-theme")||"light";document.body.dataset.theme=document.documentElement.dataset.theme}catch(e){}</script>
 </head>
 <body${bodyAttributes ? ` ${bodyAttributes}` : ''}>
     <div id="root"></div>
@@ -93,7 +93,7 @@ function virtualPages() {
 
                 const html = await server.transformIndexHtml(
                     pathname,
-                    documentShell(page, '/src/components/main.jsx')
+                    documentShell(page, '/src/components/main.jsx', '/src/index.css')
                 );
                 response.statusCode = 200;
                 response.setHeader('Content-Type', 'text/html; charset=utf-8');

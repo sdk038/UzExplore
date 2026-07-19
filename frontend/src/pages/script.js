@@ -5,6 +5,7 @@
 
     const setTheme = theme => {
         root.dataset.theme = theme;
+        document.body.dataset.theme = theme;
         document.querySelectorAll('.theme-toggle, .bukhara-theme-toggle').forEach(button => {
             const dark = theme === 'dark';
             button.setAttribute('aria-pressed', String(dark));
