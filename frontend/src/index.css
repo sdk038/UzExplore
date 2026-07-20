@@ -162,7 +162,7 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .nav-inner {
-        @apply mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8;
+        @apply mx-auto flex max-w-[100rem] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8;
     }
 
     .logo {
@@ -175,7 +175,7 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .nav-links {
-        @apply hidden items-center gap-8 text-sm font-medium md:flex;
+        @apply hidden items-center gap-6 text-sm font-medium 2xl:flex;
         color: var(--color-muted);
     }
 
@@ -192,6 +192,37 @@ html[data-theme='dark'] .border-slate-200\/80 {
     .nav-actions {
         @apply flex items-center gap-4;
         height: 40px; /* единая опорная высота для всего ряда кнопок */
+        flex-shrink: 0;
+    }
+
+    /* Keep the header compact until the full navigation has enough room. */
+    .nav-actions > .btn-primary {
+        @apply hidden xl:inline-flex;
+    }
+
+    @media (max-width: 480px) {
+        .nav-inner {
+            gap: 0.75rem;
+        }
+
+        .logo {
+            font-size: 0.875rem;
+            letter-spacing: 0.22em;
+        }
+
+        .nav-actions {
+            gap: 0.5rem;
+        }
+
+        .nav-actions > .theme-toggle {
+            display: none;
+        }
+
+        .nav-actions > .account-button,
+        .nav-actions > .language-switch a {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
     }
 
     .theme-toggle,
@@ -637,7 +668,7 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .hero-content {
-        @apply relative max-w-2xl rounded-[2rem] border p-8 text-white shadow-2xl backdrop-blur;
+        @apply relative w-full min-w-0 max-w-2xl rounded-[2rem] border p-8 text-white shadow-2xl backdrop-blur;
         background-color: rgba(6, 24, 42, 0.78);
         border-color: rgba(212, 161, 53, 0.16);
     }
@@ -655,6 +686,19 @@ html[data-theme='dark'] .border-slate-200\/80 {
 
     .eyebrow {
         @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium uppercase tracking-[0.3em] text-slate-100;
+    }
+
+    @media (max-width: 480px) {
+        .hero-content {
+            padding: 1.5rem;
+        }
+
+        .eyebrow {
+            max-width: 100%;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            line-height: 1.4;
+        }
     }
 
     .hero-content h1 {
