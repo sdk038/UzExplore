@@ -7,14 +7,14 @@ const copy = {
   en: {
     aria: 'Primary navigation',
     nav: [['#home', 'Home'], ['#cities', 'Cities'], ['/guides', 'Guides'], ['#attractions', 'Attractions'], ['#restaurants', 'Restaurants'], ['#hotels', 'Hotels'], ['#contact', 'Contact']],
-    theme: 'Toggle theme', language: 'Language selector', english: 'English', russian: 'Russian', explore: 'Explore Now', login: 'Sign in', trips: 'My trips',
+    theme: 'Toggle theme', menu: 'Menu', closeMenu: 'Close menu', language: 'Language selector', english: 'English', russian: 'Russian', explore: 'Explore Now', login: 'Sign in', trips: 'My trips',
     create: 'Create account', intro: 'Register to save bookings on this device.', name: 'Name', email: 'Email', phone: 'Phone', accept: 'I accept the service terms',
     register: 'Register', empty: 'You have no bookings yet.', cancel: 'Cancel booking', logout: 'Sign out', hello: 'Hello', close: 'Close'
   },
   ru: {
     aria: 'Основная навигация',
     nav: [['#home', 'Главная'], ['#cities', 'Города'], ['/ru/guides', 'Гиды'], ['#attractions', 'Достопримечательности'], ['#restaurants', 'Рестораны'], ['#hotels', 'Отели'], ['#contact', 'Контакты']],
-    theme: 'Переключить тему', language: 'Выбор языка', english: 'Английский', russian: 'Русский', explore: 'Исследовать', login: 'Войти', trips: 'Мои поездки',
+    theme: 'Переключить тему', menu: 'Меню', closeMenu: 'Закрыть меню', language: 'Выбор языка', english: 'Английский', russian: 'Русский', explore: 'Исследовать', login: 'Войти', trips: 'Мои поездки',
     create: 'Создать аккаунт', intro: 'Регистрация нужна для сохранения броней на этом устройстве.', name: 'Имя', email: 'Электронная почта', phone: 'Телефон',
     accept: 'Я принимаю условия сервиса', register: 'Зарегистрироваться', empty: 'У вас пока нет бронирований.', cancel: 'Отменить бронь', logout: 'Выйти из аккаунта',
     hello: 'Здравствуйте', close: 'Закрыть'
@@ -30,6 +30,7 @@ export default function SiteHeader({ locale, page = 'home' }) {
   const text = copy[locale];
   const [user, setUser] = useState(() => read(storage.user, null));
   const [modal, setModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [bookings, setBookings] = useState(() => read(storage.bookings, []));
 
   const openAccount = () => {
@@ -64,6 +65,16 @@ export default function SiteHeader({ locale, page = 'home' }) {
       <header className="navbar">
         <div className="nav-inner">
           <a className="logo" href={locale === 'ru' ? '/ru' : '/'}>Uz<span>Explore</span></a>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? text.closeMenu : text.menu}
+            aria-expanded={menuOpen}
+            aria-controls="compact-navigation"
+            onClick={() => setMenuOpen(open => !open)}
+          >
+            <span aria-hidden="true">{menuOpen ? '×' : '☰'}</span>
+          </button>
           <nav className="nav-links" aria-label={text.aria}>
             {text.nav.map(([href, label]) => {
               const target = page !== 'home' && href.startsWith('#') ? `${locale === 'ru' ? '/ru' : ''}/${href}` : href;
@@ -80,6 +91,14 @@ export default function SiteHeader({ locale, page = 'home' }) {
             <button className="account-button" data-account type="button" onClick={openAccount}>{user ? text.trips : text.login}</button>
           </div>
         </div>
+        {menuOpen && (
+          <nav className="compact-nav" id="compact-navigation" aria-label={text.aria}>
+            {text.nav.map(([href, label]) => {
+              const target = page !== 'home' && href.startsWith('#') ? `${locale === 'ru' ? '/ru' : ''}/${href}` : href;
+              return <a href={target} key={href} onClick={() => setMenuOpen(false)}>{label}</a>;
+            })}
+          </nav>
+        )}
       </header>
 
       {modal && (

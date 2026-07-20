@@ -106,6 +106,16 @@ body[data-theme='dark'] .bukhara-section--tint {
     @apply bg-slate-900/90 text-slate-100;
 }
 
+html[data-theme='dark'] .compact-nav,
+body[data-theme='dark'] .compact-nav {
+    @apply border-slate-800 bg-slate-900/95;
+}
+
+html[data-theme='dark'] .compact-nav a,
+body[data-theme='dark'] .compact-nav a {
+    @apply text-slate-200 hover:bg-slate-800 hover:text-amber-300;
+}
+
 html[data-theme='dark'] .nav-links a,
 html[data-theme='dark'] .language-switch a,
 html[data-theme='dark'] .logo,
@@ -162,12 +172,13 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .nav-inner {
-        @apply mx-auto flex max-w-[100rem] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8;
+        @apply mx-auto flex max-w-[100rem] items-center gap-3 px-4 py-4 sm:px-6 lg:px-8 xl:gap-5;
     }
 
     .logo {
         @apply text-lg font-semibold uppercase tracking-[0.3em];
         color: var(--color-deep);
+        flex-shrink: 0;
     }
 
     .logo span {
@@ -175,12 +186,12 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .nav-links {
-        @apply hidden items-center gap-6 text-sm font-medium 2xl:flex;
+        @apply hidden min-w-0 flex-1 items-center justify-between gap-2 text-xs font-medium lg:flex xl:gap-4 xl:text-sm 2xl:gap-6;
         color: var(--color-muted);
     }
 
     .nav-links a {
-        @apply px-2 py-1;
+        @apply px-1 py-1 xl:px-2;
     }
 
     .nav-links a,
@@ -207,7 +218,11 @@ html[data-theme='dark'] .border-slate-200\/80 {
 
         .logo {
             font-size: 0.875rem;
-            letter-spacing: 0.22em;
+            letter-spacing: 0.18em;
+        }
+
+        .logo span {
+            display: none;
         }
 
         .nav-actions {
@@ -226,6 +241,7 @@ html[data-theme='dark'] .border-slate-200\/80 {
     }
 
     .theme-toggle,
+    .menu-toggle,
     .account-button,
     .language-switch a,
     .app-modal__close,
@@ -245,6 +261,7 @@ html[data-theme='dark'] .border-slate-200\/80 {
 
 
     .theme-toggle:hover,
+    .menu-toggle:hover,
     .account-button:hover,
     .language-switch a:hover,
     .app-modal__close:hover,
@@ -263,12 +280,37 @@ html[data-theme='dark'] .border-slate-200\/80 {
         overflow: hidden;
     }
 
+    .menu-toggle {
+        @apply lg:hidden;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        font-size: 1.1rem;
+        line-height: 1;
+    }
+
+    .compact-nav {
+        @apply mx-auto grid max-w-[100rem] grid-cols-2 gap-2 border-t border-slate-200/80 px-4 py-3 sm:grid-cols-4 sm:px-6 lg:hidden lg:grid-cols-7 lg:px-8;
+        background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    .compact-nav a {
+        @apply rounded-xl px-3 py-2 text-center text-sm font-medium text-slate-600 transition hover:bg-amber-50 hover:text-amber-700;
+    }
+
     .theme-toggle span {
         font-size: 16px;
         line-height: 1;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1279px) {
+        .nav-actions > .theme-toggle {
+            display: none;
+        }
     }
 
 
