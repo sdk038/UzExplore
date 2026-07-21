@@ -5,53 +5,53 @@ import {resolve} from 'node:path';
 const pages = {
     '/': {
         lang: 'en',
-        title: 'UzExplore | Premium Travel in Uzbekistan'
+        title: 'UzCompass | Premium Travel in Uzbekistan'
     },
     '/ru': {
         lang: 'ru',
-        title: 'UzExplore | Премиальные путешествия по Узбекистану'
+        title: 'UzCompass | Премиальные путешествия по Узбекистану'
     },
     '/guides': {
         lang: 'en',
-        title: 'Hire a Local Guide in Uzbekistan | UzExplore',
+        title: 'Hire a Local Guide in Uzbekistan | UzCompass',
         description: 'Find a local English-speaking guide for private tours in Uzbekistan.'
     },
     '/ru/guides': {
         lang: 'ru',
-        title: 'Найти местного гида в Узбекистане | UzExplore',
+        title: 'Найти местного гида в Узбекистане | UzCompass',
         description: 'Найдите местного гида для частного тура по Узбекистану.'
     },
     '/bukhara': {
         lang: 'en',
-        title: 'Bukhara Travel Guide | UzExplore',
+        title: 'Bukhara Travel Guide | UzCompass',
         bodyClass: 'bukhara-page',
         description: "A practical, curated guide to Bukhara's heritage, food, stays, museums and transport."
     },
     '/ru/bukhara': {
         lang: 'ru',
-        title: 'Путеводитель по Бухаре | UzExplore',
+        title: 'Путеводитель по Бухаре | UzCompass',
         bodyClass: 'bukhara-page'
     },
     '/ru/city': {
         lang: 'ru',
-        title: 'Направление | UzExplore',
+        title: 'Направление | UzCompass',
         bodyClass: 'destination-page',
         destination: true
     },
     '/city': {
         lang: 'en',
-        title: 'Destination | UzExplore',
+        title: 'Destination | UzCompass',
         bodyClass: 'destination-page'
     },
     '/ru/samarkand': {
         lang: 'ru',
-        title: 'Самарканд | UzExplore',
+        title: 'Самарканд | UzCompass',
         bodyClass: 'destination-page',
         destination: true
     },
     '/samarkand': {
         lang: 'en',
-        title: 'Samarkand | UzExplore',
+        title: 'Samarkand | UzCompass',
         bodyClass: 'destination-page',
         destination: true
     },

@@ -5,7 +5,7 @@ export default function BukharaEn() {
         <div className="min-h-screen bg-stone-50 text-slate-900">
             <header className="navbar border-b border-slate-200/80 bg-white/80">
                 <div className="nav-inner">
-                    <a className="logo" href="/">Uz<span>Explore</span></a>
+                    <a className="logo" href="/" aria-label="UzCompass"><span className="logo-uz">Uz</span><span className="logo-compass">Compass</span></a>
                     <nav className="nav-links" aria-label="Primary navigation">
                         <a href="/#home">Home</a><a href="/#cities">Cities</a><a
                         href="#attractions">Attractions</a><a href="#restaurants">Restaurants</a><a
@@ -2206,7 +2206,7 @@ export default function BukharaEn() {
             <footer className="footer">
                 <div className="footer-inner">
                     <div className="footer-grid">
-                        <div><h3>UzExplore</h3><p>Premium travel inspiration for Uzbekistan’s cities, stays, restaurants
+                        <div><h3>UzCompass</h3><p>Premium travel inspiration for Uzbekistan’s cities, stays, restaurants
                             and cultural landmarks.</p></div>
                         <div><h4>Guide</h4><a href="#attractions">Attractions</a><a href="#restaurants">Food</a><a
                             href="#hotels">Hotels</a></div>
@@ -2215,7 +2215,7 @@ export default function BukharaEn() {
                         <div><h4>Language</h4><a href="/bukhara">English</a><a href="/ru/bukhara">Russian</a>
                         </div>
                     </div>
-                    <p className="copyright">© 2026 UzExplore</p></div>
+                    <p className="copyright">© 2026 UzCompass</p></div>
             </footer>
         </div>
     );

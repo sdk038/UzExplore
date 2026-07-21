@@ -19,7 +19,7 @@
     };
 
     setTheme(root.dataset.theme || 'light');
-    document.querySelectorAll('.theme-toggle, .bukhara-theme-toggle').forEach(button => {
+    document.querySelectorAll('.theme-toggle:not([data-theme-managed]), .bukhara-theme-toggle').forEach(button => {
         button.addEventListener('click', () => {
             const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
             setTheme(next);

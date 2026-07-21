@@ -175,7 +175,7 @@ export default function SamarkandRu() {
                 <div className="footer-inner">
                     <div className="footer-grid">
                         <div>
-                            <h3>UzExplore</h3>
+                            <h3>UzCompass</h3>
                             <p>Премиальное вдохновение для путешествий по городам, отелям, ресторанам и культурным
                                 местам Узбекистана.</p>
                             <div className="socials">
@@ -201,7 +201,7 @@ export default function SamarkandRu() {
                             <span>Контактные данные ожидают проверки</span>
                         </div>
                     </div>
-                    <p className="copyright">© 2026 UzExplore</p>
+                    <p className="copyright">© 2026 UzCompass</p>
                 </div>
             </footer>
         </div>

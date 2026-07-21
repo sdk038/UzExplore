@@ -6,15 +6,15 @@ const storage = { user: 'uzexplore-user', bookings: 'uzexplore-bookings' };
 const copy = {
   en: {
     aria: 'Primary navigation',
-    nav: [['#home', 'Home'], ['#cities', 'Cities'], ['/guides', 'Guides'], ['#attractions', 'Attractions'], ['#restaurants', 'Restaurants'], ['#hotels', 'Hotels'], ['#contact', 'Contact']],
-    theme: 'Toggle theme', menu: 'Menu', closeMenu: 'Close menu', language: 'Language selector', english: 'English', russian: 'Russian', explore: 'Explore Now', login: 'Sign in', trips: 'My trips',
+    nav: [['#home', 'Home'], ['#cities', 'Cities'], ['/guides', 'Guides'], ['#attractions', 'Attractions'], ['#contact', 'Contact']],
+    theme: 'Toggle theme', menu: 'Menu', closeMenu: 'Close menu', language: 'Language selector', english: 'English', russian: 'Russian', explore: 'Explore Now', login: 'Sign in', trips: 'My trips', tripsShort: 'Trips',
     create: 'Create account', intro: 'Register to save bookings on this device.', name: 'Name', email: 'Email', phone: 'Phone', accept: 'I accept the service terms',
     register: 'Register', empty: 'You have no bookings yet.', cancel: 'Cancel booking', logout: 'Sign out', hello: 'Hello', close: 'Close'
   },
   ru: {
     aria: 'Основная навигация',
-    nav: [['#home', 'Главная'], ['#cities', 'Города'], ['/ru/guides', 'Гиды'], ['#attractions', 'Достопримечательности'], ['#restaurants', 'Рестораны'], ['#hotels', 'Отели'], ['#contact', 'Контакты']],
-    theme: 'Переключить тему', menu: 'Меню', closeMenu: 'Закрыть меню', language: 'Выбор языка', english: 'Английский', russian: 'Русский', explore: 'Исследовать', login: 'Войти', trips: 'Мои поездки',
+    nav: [['#home', 'Главная'], ['#cities', 'Города'], ['/ru/guides', 'Гиды'], ['#attractions', 'Достопримечательности'], ['#contact', 'Контакты']],
+    theme: 'Переключить тему', menu: 'Меню', closeMenu: 'Закрыть меню', language: 'Выбор языка', english: 'Английский', russian: 'Русский', explore: 'Исследовать', login: 'Войти', trips: 'Мои поездки', tripsShort: 'Поездки',
     create: 'Создать аккаунт', intro: 'Регистрация нужна для сохранения броней на этом устройстве.', name: 'Имя', email: 'Электронная почта', phone: 'Телефон',
     accept: 'Я принимаю условия сервиса', register: 'Зарегистрироваться', empty: 'У вас пока нет бронирований.', cancel: 'Отменить бронь', logout: 'Выйти из аккаунта',
     hello: 'Здравствуйте', close: 'Закрыть'
@@ -31,7 +31,17 @@ export default function SiteHeader({ locale, page = 'home' }) {
   const [user, setUser] = useState(() => read(storage.user, null));
   const [modal, setModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(() => document.documentElement.dataset.theme === 'dark');
   const [bookings, setBookings] = useState(() => read(storage.bookings, []));
+
+  const toggleTheme = () => {
+    const nextDark = !darkTheme;
+    const nextTheme = nextDark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = nextTheme;
+    document.body.dataset.theme = nextTheme;
+    try { localStorage.setItem('uzexplore-theme', nextTheme); } catch { /* Storage is optional. */ }
+    setDarkTheme(nextDark);
+  };
 
   const openAccount = () => {
     setUser(read(storage.user, null));
@@ -64,7 +74,9 @@ export default function SiteHeader({ locale, page = 'home' }) {
     <>
       <header className="navbar">
         <div className="nav-inner">
-          <a className="logo" href={locale === 'ru' ? '/ru' : '/'}>Uz<span>Explore</span></a>
+          <a className="logo site-logo" href={locale === 'ru' ? '/ru' : '/'} aria-label="UzCompass">
+            <span className="logo-uz">Uz</span><span className="logo-compass">Compass</span>
+          </a>
           <button
             className="menu-toggle"
             type="button"
@@ -82,13 +94,30 @@ export default function SiteHeader({ locale, page = 'home' }) {
             })}
           </nav>
           <div className="nav-actions">
-            <button className="theme-toggle" type="button" aria-label={text.theme}><span aria-hidden="true">◐</span></button>
+            <button
+              className="theme-toggle"
+              data-theme-managed
+              type="button"
+              aria-label={text.theme}
+              aria-pressed={darkTheme}
+              onClick={toggleTheme}
+            >
+              <span aria-hidden="true">◐</span>
+            </button>
             <div className="language-switch" aria-label={text.language}>
               <a className={locale === 'en' ? 'active' : undefined} href={currentPathForLocale('en')} aria-label={text.english}>EN</a>
               <a className={locale === 'ru' ? 'active' : undefined} href={currentPathForLocale('ru')} aria-label={text.russian}>RU</a>
             </div>
             <a className="btn btn-primary" href={page === 'home' ? '#cities' : `${locale === 'ru' ? '/ru' : ''}/#cities`}>{text.explore}</a>
-            <button className="account-button" data-account type="button" onClick={openAccount}>{user ? text.trips : text.login}</button>
+            <button
+              className="account-button"
+              data-account
+              type="button"
+              aria-label={user ? text.trips : text.login}
+              onClick={openAccount}
+            >
+              {user ? text.tripsShort : text.login}
+            </button>
           </div>
         </div>
         {menuOpen && (
