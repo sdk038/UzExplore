@@ -28,7 +28,7 @@ export default function HomeEn() {
                     <div className="grid cities-grid">
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20City%20Park%20at%20night.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20Night%20Skyscrapers.jpg?width=2200"
                                 alt="Tashkent City Park at night" loading="lazy"/></div>
                             <div className="card-body"><h3>Tashkent</h3><p>A lively capital with leafy boulevards,
                                 museums, markets, and modern dining.</p>
@@ -39,7 +39,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan-Samarkand.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan%2C%20Samarkand%20%288589028275%29.jpg?width=2200"
                                 alt="Registan ensemble in Samarkand" loading="lazy"/></div>
                             <div className="card-body"><h3>Samarkand</h3><p>Legendary monuments, grand squares, and
                                 shimmering Timurid tilework.</p>
@@ -50,7 +50,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kalyan%20minaret%20in%20Bukhara.jpg?width=2200"
                                 alt="Poi Kalyan complex in Bukhara" loading="lazy"/></div>
                             <div className="card-body"><h3>Bukhara</h3><p>A warm old city of minarets, caravanserais,
                                 courtyards, and craft ateliers.</p>
@@ -61,7 +61,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=2200"
                                 alt="Itchan Kala old city in Khiva" loading="lazy"/></div>
                             <div className="card-body"><h3>Khiva</h3><p>A walled museum city with sandy lanes, towers,
                                 and sunset terraces.</p>
@@ -71,7 +71,7 @@ export default function HomeEn() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/nukus.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nukus%20museum.jpg?width=2200"
                                                         alt="Nukus city ensemble and the Savitsky Museum"
                                                         loading="lazy"/></div>
                             <div className="card-body"><h3>Nukus</h3><p>Gateway to avant-garde art, desert landscapes,
@@ -83,7 +83,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Andijon%20jome.jpg?width=2200"
                                 alt="Devonaboy Jome Mosque in Andijan" loading="lazy"/></div>
                             <div className="card-body"><h3>Andijan</h3><p>A Fergana Valley city known for orchards,
                                 bazaars, and regional culture.</p>
@@ -93,7 +93,7 @@ export default function HomeEn() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/namangan.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Namangan%20Citiy.jpg?width=2200"
                                                         alt="Historic architecture and gardens of Namangan"
                                                         loading="lazy"/></div>
                             <div className="card-body"><h3>Namangan</h3><p>Garden avenues, spiritual sites, and mountain
@@ -104,7 +104,7 @@ export default function HomeEn() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/fergana.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Park%20Life%20-%20Al-Farghani%20Park%20-%20Fergana%20-%20Uzbekistan%20%287536806402%29.jpg?width=2200"
                                                         alt="A green city boulevard in Fergana" loading="lazy"/></div>
                             <div className="card-body"><h3>Fergana</h3><p>Elegant streets, artisan workshops, silk
                                 heritage, and valley hospitality.</p>
@@ -114,7 +114,7 @@ export default function HomeEn() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/jizzakh.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zaamin%20Mountain%20Landscape.jpg?width=2200"
                                                         alt="Mountain road near Jizzakh and Zaamin" loading="lazy"/>
                             </div>
                             <div className="card-body"><h3>Jizzakh</h3><p>Mountain air, national parks, quiet towns, and
@@ -126,7 +126,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20north-east.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20yard.jpg?width=2200"
                                 alt="Kok-Gumbaz Mosque in Qarshi" loading="lazy"/></div>
                             <div className="card-body"><h3>Qarshi</h3><p>Southern heritage, bridges, madrasahs, and
                                 relaxed neighborhood cafes.</p>
@@ -137,7 +137,7 @@ export default function HomeEn() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Termez%20Sultan-Saodat.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Sulton%20saodat%20majmuasi%20-%2014.jpg?width=2200"
                                 alt="Sultan Saodat ensemble in Termez" loading="lazy"/></div>
                             <div className="card-body"><h3>Termez</h3><p>Ancient Buddhist sites, riverside history, and
                                 sunlit archaeological routes.</p>
@@ -147,7 +147,7 @@ export default function HomeEn() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/gulistan.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%93%D1%83%D0%BB%D0%B8%D1%81%D1%82%D0%B0%D0%BD.jpg?width=2200"
                                                         alt="Gulistan central square and fountains" loading="lazy"/>
                             </div>
                             <div className="card-body"><h3>Gulistan</h3><p>A calm stop with green spaces, regional

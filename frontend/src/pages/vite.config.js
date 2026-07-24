@@ -25,7 +25,7 @@ const pages = {
         lang: 'en',
         title: 'Bukhara Travel Guide | UzCompass',
         bodyClass: 'bukhara-page',
-        description: "A practical, curated guide to Bukhara's heritage, food, stays, museums and transport."
+        description: "A practical, curated guide to Bukhara's heritage, food, stays, museums and local experiences."
     },
     '/ru/bukhara': {
         lang: 'ru',

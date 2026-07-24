@@ -28,7 +28,7 @@ export default function HomeRu() {
                     <div className="grid cities-grid">
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20City%20Park%20at%20night.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Tashkent%20Night%20Skyscrapers.jpg?width=2200"
                                 alt="Ночной вид парка Ташкент-Сити" loading="lazy"/></div>
                             <div className="card-body"><h3>Ташкент</h3><p>Живая столица с зелеными бульварами, музеями,
                                 рынками и современной гастрономией.</p>
@@ -38,7 +38,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan-Samarkand.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Registan%2C%20Samarkand%20%288589028275%29.jpg?width=2200"
                                 alt="Ансамбль Регистан в Самарканде" loading="lazy"/></div>
                             <div className="card-body"><h3>Самарканд</h3><p>Легендарные памятники, величественные
                                 площади и сияющая тимуридская мозаика.</p>
@@ -48,7 +48,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Po-i-Kalyan.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kalyan%20minaret%20in%20Bukhara.jpg?width=2200"
                                 alt="Комплекс Пои-Калян в Бухаре" loading="lazy"/></div>
                             <div className="card-body"><h3>Бухара</h3><p>Теплый старинный город минаретов,
                                 караван-сараев, двориков и ремесленных мастерских.</p>
@@ -58,7 +58,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Itchan%20Kala%20Khiva%202012.jpg?width=2200"
                                 alt="Старый город Ичан-Кала в Хиве" loading="lazy"/></div>
                             <div className="card-body"><h3>Хива</h3><p>Город-музей за крепостными стенами с песчаными
                                 улицами, башнями и террасами для заката.</p>
@@ -67,7 +67,7 @@ export default function HomeRu() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/nukus.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nukus%20museum.jpg?width=2200"
                                                         alt="Городской ансамбль и музей Савицкого в Нукусе"
                                                         loading="lazy"/></div>
                             <div className="card-body"><h3>Нукус</h3><p>Ворота к авангардному искусству, пустынным
@@ -78,7 +78,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Andijon%20jome.jpg?width=2200"
                                 alt="Мечеть Девонабой в Андижане" loading="lazy"/></div>
                             <div className="card-body"><h3>Андижан</h3><p>Город Ферганской долины, известный садами,
                                 базарами и региональной культурой.</p>
@@ -87,7 +87,7 @@ export default function HomeRu() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/namangan.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Namangan%20Citiy.jpg?width=2200"
                                                         alt="Историческая архитектура и зелёные сады Намангана"
                                                         loading="lazy"/></div>
                             <div className="card-body"><h3>Наманган</h3><p>Садовые аллеи, духовные места и близкие
@@ -97,7 +97,7 @@ export default function HomeRu() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/fergana.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Park%20Life%20-%20Al-Farghani%20Park%20-%20Fergana%20-%20Uzbekistan%20%287536806402%29.jpg?width=2200"
                                                         alt="Зелёный городской проспект Ферганы" loading="lazy"/></div>
                             <div className="card-body"><h3>Фергана</h3><p>Элегантные улицы, мастерские ремесленников,
                                 шелковое наследие и гостеприимство долины.</p>
@@ -106,7 +106,7 @@ export default function HomeRu() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/jizzakh.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zaamin%20Mountain%20Landscape.jpg?width=2200"
                                                         alt="Горный маршрут в окрестностях Джизака и Заамина"
                                                         loading="lazy"/></div>
                             <div className="card-body"><h3>Джизак</h3><p>Горный воздух, национальные парки, спокойные
@@ -117,7 +117,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20north-east.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kok-Gumbaz%20mosque%20in%20Qarshi%2C%20view%20from%20the%20yard.jpg?width=2200"
                                 alt="Мечеть Кок-Гумбаз в Карши" loading="lazy"/></div>
                             <div className="card-body"><h3>Карши</h3><p>Южное наследие, мосты, медресе и уютные районные
                                 кафе.</p>
@@ -127,7 +127,7 @@ export default function HomeRu() {
                         </article>
                         <article className="card city-card">
                             <div className="image"><img
-                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Termez%20Sultan-Saodat.jpg?width=1000"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Sulton%20saodat%20majmuasi%20-%2014.jpg?width=2200"
                                 alt="Ансамбль Султан Саодат в Термезе" loading="lazy"/></div>
                             <div className="card-body"><h3>Термез</h3><p>Древние буддийские памятники, история у реки и
                                 солнечные археологические маршруты.</p>
@@ -136,7 +136,7 @@ export default function HomeRu() {
                             </div>
                         </article>
                         <article className="card city-card">
-                            <div className="image"><img src="/images/cities/gulistan.jpg"
+                            <div className="image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%93%D1%83%D0%BB%D0%B8%D1%81%D1%82%D0%B0%D0%BD.jpg?width=2200"
                                                         alt="Центральная площадь и фонтаны Гулистана" loading="lazy"/>
                             </div>
                             <div className="card-body"><h3>Гулистан</h3><p>Спокойная остановка с зелеными зонами,
